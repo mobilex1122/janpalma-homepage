@@ -3,27 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script type="module" src="src/main.ts"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Jan Palma</title>
   </head>
   <body>
-    <h1>main</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+    <nav id="main" brand="Jan Palma">
+      <item name="Domov" state="active" link="#"></item>
+      <item name="Projekty" state="normal" link="projects/"></item>
+      <item name="About" state="normal" link="#"></item>
+    </nav>
+    <div class="container rounded-2 mt-3">
+      <div class="row">
+        <div class="col my-2 p-3">
+          <h1>Jan Palma</h1>
+          <p>
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laboriosam consectetur repellendus doloribus nesciunt rem quia earum! Facilis odio illo amet id mollitia? Laboriosam expedita blanditiis quos reiciendis, officia suscipit?</p>
+          <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae quisquam culpa totam sequi! Error maxime vero hic sint itaque provident nostrum porro odio illum iste quaerat tempore, minima nobis.</span><span>Eveniet at inventore voluptates deleniti et veniam quia molestias necessitatibus, blanditiis tempora laudantium, porro adipisci nostrum quod ab earum dolorem iure excepturi. Fugit praesentium eveniet alias, labore natus aut non?</span><span>Veniam suscipit voluptate repudiandae consequatur. Dolores ex iusto quibusdam omnis itaque excepturi, unde consectetur iure consequatur ipsum, quisquam nihil ullam libero enim cupiditate non? Consequuntur voluptatibus rerum mollitia deserunt nobis.</span><span>Accusamus facilis, vero hic porro, non nihil velit ipsum doloremque ipsa sit nostrum ipsam ducimus iste tenetur sequi. Magnam mollitia earum aliquid modi nesciunt optio autem tempore quasi nobis accusantium.</span><span>Odio, veritatis necessitatibus tempora, adipisci error nihil eligendi et corrupti magni maxime temporibus? Esse quidem, quam quos nam et iusto voluptas provident hic sit quisquam architecto ab maiores sapiente fuga.</span></p>
+        </div>
+        <div class="col-lx-2  col-lg-3 my-3">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+              <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+              <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
 
-<button type="button" class="btn btn-link">Link</button>
-    <div id="app"></div>
-    <img id="img" src="" alt="">
-    <script type="module">
-      import wall from "@wall/wall1.png";
-      import 'bootstrap/scss/bootstrap.scss'
-      document.querySelector("#img").src = wall
-    </script>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
