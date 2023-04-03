@@ -1,0 +1,1 @@
+import imgUrl from "test/wall1.png"
