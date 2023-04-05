@@ -1,13 +1,18 @@
+<script setup lang="ts">
+  import navbutton from '@comp/nav-button.vue'
+  import navbar from '@comp/navbar.vue'
+</script>
 <template>
-  <div id="app">
-    <h1>Hello App!</h1>
-  <p>
-    <!-- use the router-link component for navigation. -->
-    <!-- specify the link by passing the `to` prop. -->
-    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-    <router-link to="/">Go to Home</router-link>
-    <router-link to="/about">Go to About</router-link>
-  </p>
-  <router-view></router-view>
+  <div id="app"  data-bs-theme="dark">
+    <title>{{ $route.meta.title }}</title>
+    <navbar brand='Jan Palma'>
+      <navbutton to="/">Home</navbutton>
+      <navbutton to="/about">About</navbutton>
+    </navbar>
+  
+    <div class="container">
+      <router-view></router-view>
+    </div>
+  
   </div>
 </template>

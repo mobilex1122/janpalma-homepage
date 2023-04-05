@@ -1,0 +1,19 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+$primary: #ce0000;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/bootstrap';
