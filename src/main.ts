@@ -6,6 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import App from './App.vue'
 import Home from './pages/home.vue'
 import About from './pages/about.vue'
+import Gallery from './pages/gallery.vue'
+import imgShow from './pages/imgShow.vue'
 import Errors from './pages/errors.vue'
 
 const routes = [
@@ -13,20 +15,28 @@ const routes = [
       path: '/',
       component: Home,
       meta: {
-        title: 'Jan Palma',
+        title: 'Domov',
       }
-  },
+    },
     { 
       path: '/about',
       component: About,
       meta: {
-        title: 'Jan Palma - O mě',
+        title: 'O mě',
+
+      }
+    },
+    { 
+      path: '/gallery',
+      component: Gallery,
+      meta: {
+        title: 'Galerie',
       }
     },
     {
       path: '/:pathMatch(.*)',
       component: Errors,
-      meta: { layout: 'none' }
+      meta: { layout: 'none', title: '404', nofooter:true }
   }
   ]
 
@@ -37,6 +47,7 @@ const router = createRouter({
   })
   
   // 5. Create and mount the root instance.
+
 
 createApp(App).use(router).mount('#app')
 

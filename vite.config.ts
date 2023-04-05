@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      "@comp": resolve(__dirname, "src/components")
+      "@comp": resolve(__dirname, "src/components"),
+      "@img": resolve(__dirname, "public/img")
     }
   }
 })
