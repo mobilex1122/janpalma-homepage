@@ -3,13 +3,13 @@
 import { ref } from 'vue'
 import linkButton from '@comp/link-button.vue';
 
-defineProps<{ id:string, video:string ,title:string}>()
+defineProps<{ width?:string, id:string, video:string ,title:string}>()
 
 
 </script>
 
 <template>
-    <button type="button" class="position-relative btn border-primary border-2 m-1 p-0 overflow-hidden" data-bs-toggle="modal" :data-bs-target="'#'+id">
+    <button type="button" class="position-relative btn border-primary border-2 m-1 p-0 overflow-hidden" :style="'width:'+ width+';'" data-bs-toggle="modal" :data-bs-target="'#'+id">
         <img style="width: 100%; object-fit: cover; aspect-ratio: 16/9;" class="m-0 p-0" :src="'https://img.youtube.com/vi/'+video+'/hqdefault.jpg'" alt="">
         <b class="position-absolute text-white bottom-0 start-0 w-100 pb-2" style="filter: drop-shadow(black 0 0px 4px);">{{ title }}</b>
         <i class="position-absolute top-50 start-50 translate-middle z-3 bi bi-play" style="font-size: 8rem; filter: drop-shadow(black 0 0 5px); color: white;"></i>
