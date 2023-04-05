@@ -5,7 +5,9 @@
 </script>
 <template>
   <div id="app" data-bs-theme="dark">
-    <title>Jan Palma - {{ $route.meta.title }}</title>
+    <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
+    <title v-else>Jan Palma - {{ $route.meta.title }}</title>
+    
     <navbar v-show="!$route.meta.nonav" brand='Jan Palma'>
       <navbutton to="/">Domov</navbutton>
       <navbutton to="/about">O mě</navbutton>
@@ -27,8 +29,15 @@
         </div>
         <div class="mt-4">
           
-          <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g']"><i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i></span>
-          <span v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle"></i> <code>2023</code> Jan Palma</span>
+          <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
+            <i class="bi bi-arrow-right"></i> Zdravím dobrodruhu <i class="bi bi-arrow-left"></i>
+          </span>
+          <span onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
+            <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
+          </span>
+          <span v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle">
+            </i> <code>2023</code> Jan Palma
+          </span>
         </div>
       </div>
       
@@ -37,3 +46,9 @@
 
   </div>
 </template>
+
+<style>
+  :root {
+    scroll-padding-top: 8rem;
+  }
+</style>

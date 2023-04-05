@@ -7,7 +7,7 @@ defineProps<{ href: string , active_class?: string}>()
 
 <template>
 
-    <router-link :to="href" class="btn btn-primary" :active-class="active_class"><slot/></router-link>
+    <router-link v-if="href" :to="href" class="btn btn-primary" :active-class="active_class"><slot/></router-link>
 
 
     
