@@ -3,6 +3,8 @@
 <script setup lang="ts">
     import carousellMain from '@comp/carousell/carousell-main.vue';
     import carousellImg from '@comp/carousell/carousell-img.vue';
+    import ytvideo from '@comp/yt/video.vue';
+    import ytgrid from '@comp/yt/grid.vue';
 </script>
 
 <template>
@@ -23,15 +25,17 @@
         <carousellImg src="img/2d/img3.png"/>
     </carousellMain>
     <br>
-    <h2>3D Tvorba <a class="btn btn-primary" target="_blank"  href="https://gallery.mobilex1122.eu/index.php?/category/3">Zobrazit vše</a></h2>
-    <carousellMain id="3dart">
-        <carousellImg src="img/3d/img1.png" class="active"/>
-        <carousellImg src="img/3d/img2.png"/>
-        <carousellImg src="img/3d/img3.png"/>
-        <carousellImg src="img/3d/img4.jpg"/>
-    </carousellMain>
+    <h2>Videa <a class="btn btn-primary" target="_blank"  href="https://www.youtube.com/@MobilexENCZ">Zobrazit vše</a></h2>
+    <ytgrid>
+        <ytvideo id="kesedo" video="OKbuN4DAvUg" title="Kasedo Games - Into (concept)"/>
+        <ytvideo id="nfs" video="TApyWru5q4Q" title="Cool guys - animation (Inspired by NFS intro)"/>
+        <ytvideo id="factorio" video="lUBJjQCdMH8" title="Factorio Wube logo animation"/>
+    </ytgrid>
+    
+        
+
 </template>
 
 <style scoped>
-
+    
 </style>
