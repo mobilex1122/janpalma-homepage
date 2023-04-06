@@ -17,16 +17,16 @@ defineProps<{ width?:string, id:string, video:string ,title:string}>()
 
     <!-- Modal -->
     <div class="modal modal-xl fade" :id=id tabindex="-1" :aria-labelledby=title aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }}</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ title }}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="w-100" style="aspect-ratio: 16/9;" :src="'https://www.youtube-nocookie.com/embed/'+video" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <iframe class="w-100" style="aspect-ratio: 16/9;" :src="'https://www.youtube-nocookie.com/embed/'+video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        </div>
-    </div>
-    </div>
+    </div>  
 </template>

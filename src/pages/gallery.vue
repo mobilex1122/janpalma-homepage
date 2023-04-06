@@ -3,6 +3,7 @@
 <script setup lang="ts">
     import carousellMain from '@comp/carousell/carousell-main.vue';
     import carousellImg from '@comp/carousell/carousell-img.vue';
+    import carousellYt from '@comp/carousell/carousell-yt.vue';
     import ytvideo from '@comp/yt/video.vue';
     import ytgrid from '@comp/yt/grid.vue';
 </script>
@@ -26,11 +27,16 @@
     </carousellMain>
     <br>
     <h2>Videa <a class="btn btn-primary" target="_blank"  href="https://www.youtube.com/@MobilexENCZ">Zobrazit vše</a></h2>
-    <ytgrid>
+    <carousellMain id="test">
+        <carousellYt video="OKbuN4DAvUg" title="Kasedo Games - Into (concept)" class="active"/>
+        <carousellYt video="TApyWru5q4Q" title="Cool guys - animation (Inspired by NFS intro)"/>
+        <carousellYt video="lUBJjQCdMH8" title="Factorio Wube logo animation"/>
+    </carousellMain>
+    <!-- <ytgrid>
         <ytvideo id="kesedo" video="OKbuN4DAvUg" title="Kasedo Games - Into (concept)"/>
         <ytvideo id="nfs" video="TApyWru5q4Q" title="Cool guys - animation (Inspired by NFS intro)"/>
         <ytvideo id="factorio" video="lUBJjQCdMH8" title="Factorio Wube logo animation"/>
-    </ytgrid>
+    </ytgrid> -->
     
         
 

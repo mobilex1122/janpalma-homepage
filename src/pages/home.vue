@@ -5,10 +5,10 @@
 </script>
 
 <template>
-
+    <img src="/main-logo.svg" class="mx-auto d-block" style="width: 70%;">
     <h1>Domov</h1>
  
-
+    
     <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi eum alias quis quas, impedit tempora iste, totam eos eius aut suscipit error reprehenderit quia officia commodi maxime officiis delectus?</span><span>At et maiores amet consequuntur sequi ullam aliquam, debitis consequatur unde possimus vel ut est voluptatem nulla cupiditate similique laudantium illum facere molestias nihil provident placeat pariatur cum explicabo? Eveniet.</span><span>Suscipit aliquid veritatis hic laudantium esse placeat dicta vitae repellat ullam iusto nobis saepe dolores, fuga nostrum molestiae ipsam odio, molestias libero cum reprehenderit quas, itaque minus reiciendis! Distinctio, nisi?</span><span>Earum, quidem doloremque! Velit, rem. Cumque molestias iusto, molestiae eaque ab commodi. Ex amet quas ad ipsa explicabo. Exercitationem ut eligendi soluta eius maxime possimus, corrupti ducimus provident ratione necessitatibus!</span><span>Illo, vero dicta. Fugit, nisi adipisci deserunt minima soluta magni fugiat possimus qui modi consequatur tenetur, rem, dignissimos voluptatem veniam nostrum? Nobis excepturi aliquid quos culpa quisquam inventore in eligendi!</span></p>
     
     <h2>Lorem</h2>
@@ -17,5 +17,4 @@
 </template>
 
 <style scoped>
-
 </style>

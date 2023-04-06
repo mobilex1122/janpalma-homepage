@@ -1,7 +1,11 @@
 <script setup lang="ts">
-  import navbutton from '@comp/nav-button.vue'
-  import navbar from '@comp/navbar.vue'
+  import navbutton from '@comp/navbar/button.vue'
+  import navbar from '@comp/navbar/main.vue'
+  import navmenu from '@comp/navbar/menu.vue'
+  import navsocmenu from '@comp/navbar/social-menu.vue'
+  import navlink from '@comp/navbar/link.vue'
   import linkButton from '@comp/link-button.vue';
+import path from 'path'
 </script>
 <template>
   <div id="app" data-bs-theme="dark">
@@ -9,12 +13,35 @@
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
     <navbar v-show="!$route.meta.nonav" brand='Jan Palma'>
-      <navbutton to="/">Domov</navbutton>
-      <navbutton to="/about">O mě</navbutton>
-      <navbutton to="/gallery">Galerie</navbutton>
+      <navmenu>
+        <navbutton to="/">Domov</navbutton>
+        <navbutton to="/about">O mě</navbutton>
+        <navbutton to="/gallery">Galerie</navbutton>
+      </navmenu>
+      <navsocmenu>
+        <navlink to="https://github.com/mobilex1122" class="me-3 me-lg-0" ><i class="bi bi-github"></i></navlink>
+        <navlink to="https://instagram.com/mobilex1122_cz/" class="me-3 me-lg-0" ><i class="bi bi-instagram"></i></navlink>
+        <navlink to="https://www.facebook.com/mobilex1122.cz/" class="me-3 me-lg-0" ><i class="bi bi-facebook"></i></navlink>
+        <navlink to="https://youtube.com/@mobilexENCZ/" class="me-3 me-lg-0" ><i class="bi bi-youtube"></i></navlink>
+      </navsocmenu>
+      
     </navbar>
+
   
     <div class="container my-4">
+      <nav v-if="$route.meta.type != 'error'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li>
+            <router-link v-if="$route.path != '/' " to="/">home</router-link>
+            <span v-else>home</span>
+          </li>
+          <li v-for="(item, index) in $route.path.split('/')" class="breadcrumb-item">
+            <span v-if="$route.path.split('/').slice(0,index+1).join('/') == $route.path">{{ item }}</span>
+            <a v-else :href="$route.path.split('/').slice(0,index+1).join('/')">{{ item }}</a>
+          </li>
+        </ol>
+      </nav>
+
       <router-view></router-view>
     </div>
     
@@ -22,9 +49,9 @@
       <div class="container">
         <div>
           <div class="btn-group" role="group" aria-label="Basic example">
-            <linkButton href="/" active_class="active">Domov</linkButton>
-            <linkButton href="/about" active_class="active">O mě</linkButton>
-            <linkButton href="/gallery" active_class="active">Galerie</linkButton>
+            <link-button href="/" active_class="active">Domov</link-button>
+            <link-button href="/about" active_class="active">O mě</link-button>
+            <link-button href="/gallery" active_class="active">Galerie</link-button>
           </div>
         </div>
         <div class="mt-4">
