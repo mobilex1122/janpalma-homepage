@@ -1,16 +1,16 @@
-import { createApp } from 'vue'
+import { createApp, reactive } from 'vue'
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { Tooltip} from 'bootstrap'
 import './style.scss'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import App from './App.vue'
 import Home from './pages/home.vue'
-import About from './pages/about.vue'
-import Gallery from './pages/gallery.vue'
-import AboutWeb from './pages/webinfo.vue'
+
 import Errors from './pages/errors.vue'
 
 import GlobalCCode from '@comp/global/ccode.vue'
+import Loading from '@comp/system/loading.vue'
 
 const routes = [
     { 
@@ -22,22 +22,22 @@ const routes = [
     },
     { 
       path: '/about',
-      component: About,
+      component: ()=>import("@p/about.vue"),
       meta: {
-        title: 'O mě',
+        title: 'O mně',
 
       }
     },
     { 
       path: '/gallery',
-      component: Gallery,
+      component: ()=>import("@p/gallery.vue"),
       meta: {
         title: 'Galerie',
       }
     },
     {
       path: '/about/web',
-      component: AboutWeb,
+      component: ()=>import("@p/webinfo.vue"),
       meta: {
         title: 'O Stránce',
       }
@@ -48,20 +48,48 @@ const routes = [
       meta: { layout: 'none', title: '404', nofooter:true, type:"error" }
   }
   ]
-
 const router = createRouter({
     // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
     history: createWebHistory(), //createWebHashHistory(),
     routes, // short for `routes: routes`
+    scrollBehavior(){
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({ left: 0, top: 0, behavior: "auto"})
+        }, 20)
+      })
+    }
   })
   
   // 5. Create and mount the root instance.
 
+  export const  state = reactive({
+  lighttheme: false
+})
 
-createApp(App).use(router).component(
+
+router.beforeEach((to, from, next) => {
+  // check for changes to the global property
+  if (state.lighttheme !== localStorage.lighttheme) {
+    // update the global property with the new value
+    state.lighttheme = (localStorage.lighttheme == 'true')
+  }
+  // continue with the navigation
+  next()
+})
+
+let app = createApp(App)
+app.config.globalProperties.settings = {
+  lighttheme: false,
+  reducedanim: false
+}
+app.use(router)
+app.component(
   // the registered name
   'ccode',
   GlobalCCode
   
-).mount('#app')
+)
+
+app.mount('#app')
 

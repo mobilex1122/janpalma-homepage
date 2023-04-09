@@ -5,50 +5,51 @@
 </script>
 
 <template>
-    <h1>O Stránce</h1>
-    
-        <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
+    <div>
+        <h1>O Stránce</h1>
         
-        <h2>Frameworky</h2>
-        <div class="card">
-            <div class="card-header">
+            <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
+            
+            <h2>Frameworky</h2>
+            <div class="card">
+                <div class="card-header">
 
-        <div class="nav nav-tabs card-header-tabs" id="frameworkinfo" role="tablist">
-            <button class="nav-link d-flex align-items-center active" id="vue-tab" data-bs-toggle="tab" data-bs-target="#vue" type="button" role="tab" aria-controls="vue" aria-selected="true">
-                <img class="ratio-1x1" src="/svg/icons/vue.svg" alt="Vue logo" style="height: 2em; padding-right: 0.5em;"/>
-                Vue
-            </button>
-            <button class="nav-link d-flex align-items-center" id="vite-tab" data-bs-toggle="tab" data-bs-target="#vite" type="button" role="tab" aria-controls="vue" aria-selected="true">
-                <img class="ratio-1x1" src="/svg/icons/vite.svg" alt="Vite logo" style="height: 2em; padding-right: 0.5em;"/>
-                Vite
-            </button>
-                <button class="nav-link d-flex align-items-center" id="ts-tab" data-bs-toggle="tab" data-bs-target="#ts" type="button" role="tab" aria-controls="vue" aria-selected="true">
-                    <img class="ratio-1x1" src="/svg/icons/ts.svg" alt="Ts logo" style="height: 2em; padding-right: 0.5em;"/>
-                    Typescript
+            <div class="nav nav-tabs card-header-tabs" id="frameworkinfo" role="tablist">
+                <button class="nav-link d-flex align-items-center active" id="vue-tab" data-bs-toggle="tab" data-bs-target="#vue" type="button" role="tab" aria-controls="vue" aria-selected="true">
+                    <img class="ratio-1x1" src="/svg/icons/vue.svg" alt="Vue logo" style="height: 2em; padding-right: 0.5em;"/>
+                    Vue
                 </button>
-                <button class="nav-link d-flex align-items-center" id="vue-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="vue" aria-selected="true">
-                    <img class="ratio-1x1" src="/svg/icons/bs.svg" alt="Bootstrap logo" style="height: 2em; padding-right: 0.5em;"/>
-                    Bootstrap
+                <button class="nav-link d-flex align-items-center" id="vite-tab" data-bs-toggle="tab" data-bs-target="#vite" type="button" role="tab" aria-controls="vue" aria-selected="true">
+                    <img class="ratio-1x1" src="/svg/icons/vite.svg" alt="Vite logo" style="height: 2em; padding-right: 0.5em;"/>
+                    Vite
                 </button>
+                    <button class="nav-link d-flex align-items-center" id="ts-tab" data-bs-toggle="tab" data-bs-target="#ts" type="button" role="tab" aria-controls="vue" aria-selected="true">
+                        <img class="ratio-1x1" src="/svg/icons/ts.svg" alt="Ts logo" style="height: 2em; padding-right: 0.5em;"/>
+                        Typescript
+                    </button>
+                    <button class="nav-link d-flex align-items-center" id="vue-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="vue" aria-selected="true">
+                        <img class="ratio-1x1" src="/svg/icons/bs.svg" alt="Bootstrap logo" style="height: 2em; padding-right: 0.5em;"/>
+                        Bootstrap
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="card-body">
+            <div class="card-body">
 
-        <div class="tab-content card-text" id="frameworkinfotabs">
-            <div class="tab-pane m-2 show active" id="vue" role="tabpanel" aria-labelledby="vue-tab" tabindex="0">
-                <h3>Vue</h3>
-                <p>
-                    Je framework pro JavaScript který ulehčuje tvorbu UI (Uživatelského Rozhtaní).
-                    Dá se nainsatllovat pomocí <ccode>npm</ccode> (node package manager) nebo jen importovat <ccode>CDN</ccode> (Content Delivery Network).
-                    Celá tahle stránka byla vytvořená pomocí Vue, i s vlastníma komponentama.
-                </p>
-                <p>
-                    Většina stránek vyvořených pomocí Vue je rozkouskovaná na víc souborů <ccode>.vue</ccode> které můžou být celé stránky nebo jen komponenty.
-                    Výhodou komponentů je že místo psaní velkého kódu pořát dokola se může psát jeden kradší který dosáhne stejného výsledku.
-                </p>
-                <h4>Příklad</h4>
-                <h5>Normální kód:</h5>
-                <div class="bg-body-secondary rounded p-1">
+            <div class="tab-content card-text" id="frameworkinfotabs">
+                <div class="tab-pane m-2 show active" id="vue" role="tabpanel" aria-labelledby="vue-tab" tabindex="0">
+                    <h3>Vue</h3>
+                    <p>
+                        Je framework pro JavaScript který ulehčuje tvorbu UI (Uživatelského Rozhtaní).
+                        Dá se nainsatllovat pomocí <ccode>npm</ccode> (node package manager) nebo jen importovat <ccode>CDN</ccode> (Content Delivery Network).
+                        Celá tahle stránka byla vytvořená pomocí Vue, i s vlastníma komponentama.
+                    </p>
+                    <p>
+                        Většina stránek vyvořených pomocí Vue je rozkouskovaná na víc souborů <ccode>.vue</ccode> které můžou být celé stránky nebo jen komponenty.
+                        Výhodou komponentů je že místo psaní velkého kódu pořát dokola se může psát jeden kradší který dosáhne stejného výsledku.
+                    </p>
+                    <h4>Příklad</h4>
+                    <h5>Normální kód:</h5>
+                    <div class="bg-body-secondary rounded p-1">
                     <pre class="m-0"><code id="htmlViewer" style="color:rgb(171, 178, 191); font-weight:400;display:block;padding: .5em;">&lt;div <span style="color:rgb(249, 38, 114); font-weight:400;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;carousel-item w-100 bg-white position-relative&quot;</span>&gt;
     <span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;isolation: isolate;&quot;</span>&gt;</span>
         <span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">style</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;width: 100%; object-fit: cover; aspect-ratio: 16/9;&quot;</span> <span class="hljs-attr">class</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;m-0 p-0&quot;</span> <span class="hljs-attr">src</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&#x27;https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg&#x27;&quot;</span> <span class="hljs-attr">alt</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&quot;</span>&gt;</span>
@@ -74,49 +75,48 @@
         <span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span class="hljs-name">div</span>&gt;</span>  
 <span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+                    </div>
+                    <br>
+                    <h5>Vue kód:</h5>
+                    <p>Stejný kód jen přepsaný do kompomentu a importovaný pod jménem <ccode>carousellYt</ccode></p>
+                    <div class="bg-body-secondary rounded p-1">
+                        <pre class="p-0 m-0"><code id="htmlViewer" style="color:rgb(171, 178, 191); font-weight:400;display:block;padding: .5em;"><span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(224, 108, 117); font-weight:400;background:rgba(0, 0, 0, 0);">carousellYt</span> <span style="color:rgb(209, 154, 102); font-weight:400;background:rgba(0, 0, 0, 0);">video</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;dQw4w9WgXcQ&quot;</span> <span style="color:rgb(209, 154, 102); font-weight:400;background:rgba(0, 0, 0, 0);">title</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Video&quot;</span>/&gt;</span></code></pre>
+                    </div>
                 </div>
-                <br>
-                <h5>Vue kód:</h5>
-                <p>Stejný kód jen přepsaný do kompomentu a importovaný pod jménem <ccode>carousellYt</ccode></p>
-                <div class="bg-body-secondary rounded p-1">
-                    <pre class="p-0 m-0"><code id="htmlViewer" style="color:rgb(171, 178, 191); font-weight:400;display:block;padding: .5em;"><span style="color:rgb(171, 178, 191); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(224, 108, 117); font-weight:400;background:rgba(0, 0, 0, 0);">carousellYt</span> <span style="color:rgb(209, 154, 102); font-weight:400;background:rgba(0, 0, 0, 0);">video</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;dQw4w9WgXcQ&quot;</span> <span style="color:rgb(209, 154, 102); font-weight:400;background:rgba(0, 0, 0, 0);">title</span>=<span style="color:rgb(152, 195, 121); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Video&quot;</span>/&gt;</span></code></pre>
+                <div class="tab-pane m-2" id="vite" role="tabpanel" aria-labelledby="vite-tab" tabindex="0">
+                    <h3>Vite</h3>
+                    <p>
+                        Vite je tzv.: <ccode>Bundler</ccode> což je software který zjednodušuje a spravuje <ccode>.js</ccode>,<ccode>.html</ccode>,<ccode>.css</ccode>,<ccode>.scss</ccode> soubory a zabaluje je je do menších souborů.<br>
+                        Umí V reálném čase převádět Typescript a scss soubory do JS a css souborů.<br>
+                        Tež umí <ccode>HMR</ccode> (Hot Module Replacement) což je umožnůje změnu kódu bez potřeby restartu stránky.<br>
+                        Tahle stránka je normálně přibližně 15 souborů a vy se koukáte na stejnou stránku která má jen 5 souborů z těch jen jeden je <ccode>.html</ccode>.
+                    </p>
                 </div>
-            </div>
-            <div class="tab-pane m-2" id="vite" role="tabpanel" aria-labelledby="vite-tab" tabindex="0">
-                <h3>Vite</h3>
-                <p>
-                    Vite je tzv.: <ccode>Bundler</ccode> což je software který zjednodušuje a spravuje <ccode>.js</ccode>,<ccode>.html</ccode>,<ccode>.css</ccode>,<ccode>.scss</ccode> soubory a zabaluje je je do menších souborů.<br>
-                    Umí V reálném čase převádět Typescript a scss soubory do JS a css souborů.<br>
-                    Tež umí <ccode>HMR</ccode> (Hot Module Replacement) což je umožnůje změnu kódu bez potřeby restartu stránky.<br>
-                    Tahle stránka je normálně přibližně 15 souborů a vy se koukáte na stejnou stránku která má jen 5 souborů z těch jen jeden je <ccode>.html</ccode>.
-                </p>
-            </div>
-            <div class="tab-pane m-2" id="ts" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                <h3>Typescript</h3>
-            </div>
-            <div class="tab-pane m-2" id="bootstrap" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                <h3>Bootstrap</h3>
-                <p>
-                    Bootstrap je vysoce upravitelná css/js sada která umožnůje rychle tvořit responzivní webové stránky.
-                    Většina elementů na téhle stránce byla vytvořená pomocí bootstrapu.
+                <div class="tab-pane m-2" id="ts" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <h3>Typescript</h3>
+                </div>
+                <div class="tab-pane m-2" id="bootstrap" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <h3>Bootstrap</h3>
+                    <p>
+                        Bootstrap je vysoce upravitelná css/js sada která umožnůje rychle tvořit responzivní webové stránky.
+                        Většina elementů na téhle stránce byla vytvořená pomocí bootstrapu.
 
-                    
-                </p>
-                <a class="btn btn-primary" href="https://getbootstrap.com/">Bootstrap stránky</a>
+                        
+                    </p>
+                    <a class="btn btn-primary" href="https://getbootstrap.com/">Bootstrap stránky</a>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    <br>
-    <h2>Vlastní styly, komponenty</h2>
+        </div>
+        <br>
+        <h2>Vlastní styly, komponenty</h2>
 
         
 
-
+    </div>
 </template>
 
 <script>
-
 </script>
 
 <style scoped>
