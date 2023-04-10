@@ -5,6 +5,9 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect all requests to index.html
+RewriteRule ^api/posts$ api/pub.php?action=getPosts [QSA,NC,PT]
+RewriteRule ^api/test$ api/pub.php?action=test [QSA,NC,PT]
+##RewriteRule ^api/products$ api.php?action=getProducts [QSA,NC,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html [L]
