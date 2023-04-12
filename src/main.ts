@@ -1,11 +1,10 @@
 import { createApp, reactive } from 'vue'
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
-import { Tooltip} from 'bootstrap'
+import { createRouter, createWebHistory } from 'vue-router'
 import './style.scss'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import App from './App.vue'
-import Home from './pages/home.vue'
+import Home from '@p/home.vue'
 
 import Errors from './pages/errors.vue'
 
@@ -63,33 +62,22 @@ const router = createRouter({
   
   // 5. Create and mount the root instance.
 
-  export const  state = reactive({
-  lighttheme: false
-})
 
 
-router.beforeEach((to, from, next) => {
-  // check for changes to the global property
-  if (state.lighttheme !== localStorage.lighttheme) {
-    // update the global property with the new value
-    state.lighttheme = (localStorage.lighttheme == 'true')
-  }
-  // continue with the navigation
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   // check for changes to the global property
+//   if (state.lighttheme !== localStorage.lighttheme) {
+//     // update the global property with the new value
+//     state.lighttheme = (localStorage.lighttheme == 'true')
+//   }
+//   // continue with the navigation
+//   next()
+// })
 
-let app = createApp(App)
-app.config.globalProperties.settings = {
-  lighttheme: false,
-  reducedanim: false
-}
-app.use(router)
-app.component(
+createApp(App).use(router).component(
   // the registered name
   'ccode',
   GlobalCCode
   
-)
-
-app.mount('#app')
+).mount('#app')
 

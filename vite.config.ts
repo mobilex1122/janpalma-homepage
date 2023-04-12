@@ -11,5 +11,10 @@ export default defineConfig({
       "@img": resolve(__dirname, "public/img"),
       "@p": resolve(__dirname, "src/pages")
     }
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    }
   }
 })

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import linkButton from '@comp/link-button.vue'
 import { appendFile } from 'fs';
-import { state } from '../main';
+import { state } from '../props';
   
 
 </script>

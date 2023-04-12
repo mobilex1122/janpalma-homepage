@@ -5,8 +5,7 @@
   import navsocmenu from '@comp/navbar/social-menu.vue'
   import navlink from '@comp/navbar/link.vue'
   import linkButton from '@comp/link-button.vue';
-  import { App, vModelCheckbox } from 'vue'
-  import { state } from './main.js'
+  import { state } from './props.js'
 
   //import { Tooltip } from 'bootstrap'
 
@@ -48,7 +47,7 @@
           </div>
           <div class="modal-body">
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="settingsReducedAnim" @click="switchAnim()" v-model="settings.reducedanim" >
+              <input class="form-check-input" type="checkbox" role="switch" id="settingsReducedAnim" @click="switchAnim()" v-model="state.reducedanim" >
               <label class="form-check-label" for="settingsReducedAnim">Mírnější animace (Odstraní přechodové animace)</label>
             </div>
             <div class="form-check form-switch">
@@ -82,38 +81,55 @@
       </nav>
 
       <!-- render -->
-      <router-view id="renderview" v-slot="{ Component }" :class="{noanim: settings.reducedanim}">
+      <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim}">
         <transition name="slide" mode="out-in">
             <component :is="Component" />
         </transition>
       </router-view>
 
+    
+    
+    
+    
     </div>
     
     <!-- footer -->
+
+
+    
     <footer v-show="!$route.meta.nofooter" class="text-center bg-body-tertiary pt-3 pb-5">
       <div class="container">
-        <div>
-          <div class="btn-group" role="group" aria-label="Basic example">
-            <link-button href="/" active_class="active">Domov</link-button>
-            <link-button href="/about" active_class="active">O mě</link-button>
-            <link-button href="/gallery" active_class="active">Galerie</link-button>
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <router-link to="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <!-- <svg class="bi" width="30" height="24"> -->
+                <img v-if="state.lighttheme" src="/logo-dark.svg" width="30" height="24" alt="">
+                <img v-else src="/logo-light.svg" width="30" height="24" alt="">
+              </router-link>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Jan Palma</span>
           </div>
-        </div>
-        <div class="mt-4">
-          
-          <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
-            <i class="bi bi-arrow-right"></i> Zdravím dobrodruhu <i class="bi bi-arrow-left"></i>
-          </span>
-          <span onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
-            <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
-          </span>
-          <span v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle">
-            </i> <code>2023</code> Jan Palma
-          </span>
-        </div>
-      </div>
+          <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <link-button href="/" active_class="active">Domov</link-button>
+                <link-button href="/about" active_class="active">O mě</link-button>
+                <link-button href="/gallery" active_class="active">Galerie</link-button>
+              </div>
+          </div>
+          <!-- <div class="mt-4">
+
+            <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
+              <i class="bi bi-arrow-right"></i> Zdravím dobrodruhu <i class="bi bi-arrow-left"></i>
+            </span>
+            <span onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
+              <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
+            </span>
+            <span v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle">
+              </i> <code>2023</code> Jan Palma
+            </span>
+          </div> -->
+        </div> 
       
+      </div>
       
     </footer>
 
@@ -125,9 +141,9 @@
     
     methods: {
       switchAnim() {
-        this.settings.reducedanim = !this.settings.reducedanim
-        localStorage.reducedanim = this.settings.reducedanim
-        if (this.settings.reducedanim) {
+        state.reducedanim = !state.reducedanim
+        localStorage.reducedanim = state.reducedanim
+        if (state.reducedanim) {
           document.querySelector("#renderview")?.classList.add("noanim")
         } else {
           document.querySelector("#renderview")?.classList.remove("noanim")
@@ -148,7 +164,7 @@
     },
     mounted() {
       if (localStorage.reducedanim) {
-        this.settings.reducedanim = Boolean((localStorage.reducedanim == "true"));
+        state.reducedanim = Boolean((localStorage.reducedanim == "true"));
         
         
 
