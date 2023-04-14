@@ -15,7 +15,7 @@
     <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
-    <navbar v-show="!$route.meta.nonav" brand='Jan Palma'>
+    <navbar class="bg-blur-md-20 bg-opacity-md-75" v-show="!$route.meta.nonav" brand='Jan Palma'>
       <navmenu>
         <navbutton to="/">Domov</navbutton>
         <navbutton to="/about">O mně</navbutton>

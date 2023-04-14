@@ -16,6 +16,22 @@ $theme-colors: (
   "dark":       $dark
 );
 
-
 @import 'bootstrap/scss/variables-dark';
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "./jp-extend/blur.scss";
+
 @import 'bootstrap/scss/bootstrap';
+
+
+// .bg-blur {
+//   --blur-size: 5px;
+//   --bg-opacity: 0.4;
+//   --bg-color: #000000;
+//   backdrop-filter: blur(var(--blur-size));
+//   background: none;
+//   background-color: #303030bb !important;
+
+// }
