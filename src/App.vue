@@ -15,7 +15,7 @@
     <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
-    <navbar class="bg-blur-md-20 bg-opacity-md-75" v-show="!$route.meta.nonav" brand='Jan Palma'>
+    <navbar class="bg-blur-md-20 bg-opacity-md-75 border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
       <navmenu>
         <navbutton to="/">Domov</navbutton>
         <navbutton to="/about">O mně</navbutton>
@@ -186,6 +186,17 @@
 </script>
 
 <style lang="css">
+  .navbar-noise::before {
+    position: absolute;
+    content: "";
+    background-image: url(/noise.png);
+    background-size: 500px 500px;
+    opacity: 0.1;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+  }
+
   :root {
     scroll-padding-top: 8rem;
   }
