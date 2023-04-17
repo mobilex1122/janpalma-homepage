@@ -3,6 +3,7 @@ import { reactive } from "vue";
 
 export const state = reactive({
     lighttheme: false,
-    reducedanim: false
+    reducedanim: false,
+    blur: true
 })
   

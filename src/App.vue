@@ -15,7 +15,7 @@
     <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
-    <navbar class="bg-blur-md-20 bg-opacity-md-75 border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
+    <navbar :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" class="border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
       <navmenu>
         <navbutton to="/">Domov</navbutton>
         <navbutton to="/about">O mně</navbutton>
@@ -39,20 +39,27 @@
     <!-- Settings -->
 
     <div class="modal fade" id="settings" tabindex="-1" data-bs-backdrop="static" aria-labelledby="settingslabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="settingslabel">Nastavení</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <!-- reduced animations -->
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch" id="settingsReducedAnim" @click="switchAnim()" v-model="state.reducedanim" >
               <label class="form-check-label" for="settingsReducedAnim">Mírnější animace (Odstraní přechodové animace)</label>
             </div>
+            <!-- Theme -->
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" role="switch" id="settingsLightMode" @click="switchTheme()" v-model="state.lighttheme" >
               <label class="form-check-label" for="settingsLightMode">Světlý motiv</label>
+            </div>
+            <!-- Blur -->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="settingsBlur" @click="switchBlur()" v-model="state.blur" >
+              <label class="form-check-label" for="settingsBlur">Rozmazání (Vypnuto = lepší výkon)</label>
             </div>
           </div>
           <div class="modal-footer">
@@ -106,7 +113,15 @@
                 <img v-if="state.lighttheme" src="/logo-dark.svg" width="30" height="24" alt="">
                 <img v-else src="/logo-light.svg" width="30" height="24" alt="">
               </router-link>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Jan Palma</span>
+            <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
+              <i class="bi bi-arrow-right"></i> Zdravím dobrodruhu <i class="bi bi-arrow-left"></i>
+            </span>
+            <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
+              <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
+            </span>
+            <span class="mb-3 mb-md-0 text-body-secondary" v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle">
+              </i> <code>2023</code> Jan Palma
+            </span>
           </div>
           <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
               <div class="btn-group" role="group" aria-label="Basic example">
@@ -161,6 +176,11 @@
         localStorage.lighttheme = state.lighttheme
         console.log(this.settings)
       },
+      switchBlur() {
+        state.blur = !state.blur
+        localStorage.blur = state.blur
+        console.log(this.settings)
+      },
     },
     mounted() {
       if (localStorage.reducedanim) {
@@ -173,6 +193,9 @@
         state.lighttheme = Boolean((localStorage.lighttheme == "true"));
       }
 
+      if (localStorage.blur) {
+        state.blur = Boolean((localStorage.blur== "true"));
+      }
 
       if (state.lighttheme) {
           document.body.setAttribute("data-bs-theme", "light")
@@ -202,7 +225,7 @@
   }
 
   * {
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, backdrop-filter 0.2s;
   }
 
 
