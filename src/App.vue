@@ -126,7 +126,7 @@
           <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
               <div class="btn-group" role="group" aria-label="Basic example">
                 <link-button href="/" active_class="active">Domov</link-button>
-                <link-button href="/about" active_class="active">O mě</link-button>
+                <link-button href="/about" active_class="active">O mně</link-button>
                 <link-button href="/gallery" active_class="active">Galerie</link-button>
               </div>
           </div>
