@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"type":"file","file":"Návrh/O mně.md","id":"42c56965c8c1ec61","x":-420,"y":-460,"width":660,"height":400},
+		{"type":"file","file":"Návrh/O Stránce.md","id":"d4b032c9dba3e5cb","x":-420,"y":40,"width":660,"height":520},
+		{"type":"file","file":"Návrh/Galerie.md","id":"e7c12d21bab052c3","x":260,"y":-460,"width":660,"height":400},
+		{"id":"6cad80ed2e0c7d9a","x":940,"y":-460,"width":660,"height":400,"type":"file","file":"Návrh/Projekty.md"},
+		{"type":"file","file":"Návrh/Domov.md","id":"7f8f81a61f632f6b","x":-1100,"y":-460,"width":660,"height":400},
+		{"id":"e9f91a2e4ef88203","x":86,"y":-740,"width":309,"height":50,"type":"text","text":"# Navigační Panel"}
+	],
+	"edges":[
+		{"id":"5d7a8d6449681ca9","fromNode":"42c56965c8c1ec61","fromSide":"bottom","toNode":"d4b032c9dba3e5cb","toSide":"top","fromEnd":"arrow"},
+		{"id":"76aee7025c049817","fromNode":"e9f91a2e4ef88203","fromSide":"bottom","toNode":"7f8f81a61f632f6b","toSide":"top"},
+		{"id":"0947a9a5631ed2fe","fromNode":"e9f91a2e4ef88203","fromSide":"bottom","toNode":"42c56965c8c1ec61","toSide":"top"},
+		{"id":"21ab11cd77bfcc87","fromNode":"e9f91a2e4ef88203","fromSide":"bottom","toNode":"e7c12d21bab052c3","toSide":"top"},
+		{"id":"da5f83fff87ce01e","fromNode":"e9f91a2e4ef88203","fromSide":"bottom","toNode":"6cad80ed2e0c7d9a","toSide":"top"}
+	]
+}

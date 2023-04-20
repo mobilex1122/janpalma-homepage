@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "b51c4133146c9fa8",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e76235e1d704d4c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9712eab8a0be239f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dokumentace/Dokumentace.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "3e94f076643f72b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dokumentace/konfigurace/props.ts.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2cfddf56ad6fa8bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "c48b2a22de953531",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f710abf55d04f358",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2677626096cbe04c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "64269cb132d40002",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "aa7ef70a6a169d9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "19403436d4e173f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64e795053d16bc5f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dokumentace/konfigurace/props.ts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "10da7f9d86627b9c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Dokumentace/konfigurace/props.ts.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5e4770c2c5a2dbf7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e4a41a20d126b581",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dokumentace/konfigurace/props.ts.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "floating": {
+    "id": "492e9fcc6bf2e7d3",
+    "type": "floating",
+    "children": [
+      {
+        "id": "0ab64029be527241",
+        "type": "window",
+        "children": [
+          {
+            "id": "f6057b425dc289cc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1212e786facd70f8",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 344,
+        "y": 69,
+        "width": 1576,
+        "height": 967,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3e94f076643f72b3",
+  "lastOpenFiles": [
+    "Návrh/Domov.md",
+    "Dokumentace/konfigurace/props.ts.md",
+    "Návrh/Galerie.md",
+    "Návrh/Návrh Textu.md",
+    "Návrh/O mně.md",
+    "Návrh/O Stránce.md",
+    "Návrh/Projekty.md",
+    "Přepis/Přepis Textu.md",
+    "README.md",
+    "Dokumentace/Dokumentace.md",
+    "Dokumentace/konfigurace/package.json.md",
+    "Dokumentace/automatizace/Navigační panel a footer.md",
+    "Dokumentace/styly/Rozmazání.md",
+    "obrazky/settings.png",
+    "Dokumentace/styly",
+    "Mapy/Mapa Stránek - Návrh.canvas",
+    "Mapy/Mapa Stránek - Přepis.canvas",
+    "Untitled.canvas",
+    "Dokumentace/automatizace",
+    "Dokumentace/konfigurace",
+    "Návrh/Návrh.md",
+    "Návrh/Návrh textu",
+    "Dokumentace",
+    "obrazky/footer.png",
+    "obrazky",
+    "footer.png",
+    "Mapy",
+    "Mapa Stránek - Přepis.md",
+    "Přepis",
+    "Návrh"
+  ]
+}

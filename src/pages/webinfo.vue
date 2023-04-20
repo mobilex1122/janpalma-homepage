@@ -1,18 +1,36 @@
 
 
 <script setup lang="ts">
-
+    import accorMain from '@comp/accordion/main.vue';
+    import accorItem from '@comp/accordion/item.vue';
 </script>
 
 <template>
     <div>
         <h1>O Stránce</h1>
         
-            <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
+        <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
+
+
+        <h2>Obsidian Poznámky</h2>
+        <p>Poznámky kde jsou předlohy, Návrhy, Dokumentace a Mapy* stránky.</p>
+        <p>Můžou tam být gramatické chyby</p>
+        <hr>
+        <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#download">
+            Stáhnout
+        </button>
+        <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#online">
+            Otevřít Online
+        </button>
+        <hr>
+
+        
             
-            <h2>Frameworky</h2>
-            <div class="card">
-                <div class="card-header">
+
+
+        <h2>Frameworky</h2>
+        <div class="card">
+            <div class="card-header">
 
             <div class="nav nav-tabs card-header-tabs" id="frameworkinfo" role="tablist">
                 <button class="nav-link d-flex align-items-center active" id="vue-tab" data-bs-toggle="tab" data-bs-target="#vue" type="button" role="tab" aria-controls="vue" aria-selected="true">
@@ -108,10 +126,62 @@
             </div>
         </div>
         </div>
-        <br>
-        <h2>Vlastní styly, komponenty</h2>
+        <!-- <br>
+        <h2>Vlastní styly, komponenty</h2> -->
 
         
+
+
+
+        <code>*: Mapy jsou vyditelné pouze v softwaru Obsidian</code>
+        <div class="modal fade" tabindex="-1" id="download">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Pozor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Pro správné zobrazení potřebujete software jménem Obsidian. Který je dostupný ke stažení <a href="https://obsidian.md/download">Zde</a>
+                        </p>
+                        <p>
+                            Pokud tento software nechcete stahovat můžete se podívat na online limitovanou verzy
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Zavřít</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#online">Otevřít Online</button>
+                        <button type="button" class="btn btn-primary">Stáhnout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" id="online">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Pozor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Online verze je limitovaná a nemá všechny funkce dostupné (Jako mapy).
+                        </p>
+                        <p>
+                            Doporučuju stáhnout Offline verzy.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Zavřít</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#download">Stáhnout</button>
+                        <a href="/obsidian/readme.html" target="_blank" type="button" class="btn btn-primary">Otevřít Online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 </template>

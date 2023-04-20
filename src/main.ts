@@ -39,12 +39,20 @@ const routes = [
       component: ()=>import("@p/webinfo.vue"),
       meta: {
         title: 'O Stránce',
+        show: false
+      }
+    },
+    {
+      path: '/obsidian',
+      component: ()=>import("@p/obsidian.vue"),
+      meta: {
+        title: 'Obsidian Poznámky',
       }
     },
     {
       path: '/:pathMatch(.*)',
       component: Errors,
-      meta: { layout: 'none', title: '404', nofooter:true, type:"error" }
+      meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }
   }
   ]
 const router = createRouter({

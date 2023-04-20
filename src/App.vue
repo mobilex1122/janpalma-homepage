@@ -5,7 +5,7 @@
   import navsocmenu from '@comp/navbar/social-menu.vue'
   import navlink from '@comp/navbar/link.vue'
   import linkButton from '@comp/link-button.vue';
-  import { state } from './props.js'
+  import { state, pages } from './props.js'
 
   //import { Tooltip } from 'bootstrap'
 
@@ -16,11 +16,15 @@
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
     <navbar :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" class="border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
-      <navmenu>
-        <navbutton to="/">Domov</navbutton>
-        <navbutton to="/about">O mně</navbutton>
-        <navbutton to="/gallery">Galerie</navbutton>
-      </navmenu>
+      <!-- Auto generated links from /src/props.ts -->
+      <template v-for="data in pages" >
+        <!-- Generates only if ismain == true -->
+        <navmenu v-if="data.ismain == true">
+            <template v-for="page in data.pages">
+              <navbutton :to="page.url">{{ page.title }}</navbutton>
+            </template>
+        </navmenu>
+      </template>
       <navsocmenu>
         <button type="button" class="me-3 me-lg-0 nav-link" data-bs-toggle="modal" data-bs-target="#settings"><i class="bi bi-gear-fill"></i></button>
         
@@ -104,32 +108,52 @@
 
 
     
-    <footer v-show="!$route.meta.nofooter" class="text-center bg-body-tertiary pt-3 pb-5">
+    <footer v-show="!$route.meta.nofooter" class=" bg-body-tertiary pt-3 pb-5">
       <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <router-link to="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <!-- <svg class="bi" width="30" height="24"> -->
-                <img v-if="state.lighttheme" src="/logo-dark.svg" width="30" height="24" alt="">
-                <img v-else src="/logo-light.svg" width="30" height="24" alt="">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-4 border-top">
+          <div class="col mb-3">
+            <div class="mb-2">
+              <router-link to="/" class="text-body-secondary text-decoration-none">
+                <!-- <svg class="bi" width="30" height="24"> -->
+                <img v-if="state.lighttheme" src="/logo-dark.svg" width="50" height="50" alt="">
+                <img v-else src="/logo-light.svg" width="50" height="50" alt="">
               </router-link>
-            <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
+            </div>
+            
+
+            <p class="text-body-secondary">
+              <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
               <i class="bi bi-arrow-right"></i> Zdravím dobrodruhu <i class="bi bi-arrow-left"></i>
-            </span>
-            <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
-              <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
-            </span>
-            <span class="mb-3 mb-md-0 text-body-secondary" v-else><i onclick="location.href = '?e_as-the-register-g=1'" class="bi bi-c-circle">
-              </i> <code>2023</code> Jan Palma
-            </span>
+              </span>
+              <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
+                <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
+              </span>
+              <span class="mb-3 mb-md-0 text-body-secondary" v-else><span onclick="location.href = '?e_as-the-register-g=1'">©</span> 2023 Jan Palma
+              </span>
+            </p>
+            
           </div>
-          <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <link-button href="/" active_class="active">Domov</link-button>
-                <link-button href="/about" active_class="active">O mně</link-button>
-                <link-button href="/gallery" active_class="active">Galerie</link-button>
-              </div>
+          <!-- Auto generated links from /src/props.ts -->
+          <div v-for="data in pages" class="col mb-3">
+                <!-- Category name -->
+                <h5>{{ data.name}}</h5>
+
+                <!-- Generate based on type -->
+                <!-- Links (outside main domain) -->
+                <ul v-if="data.type == 'links'" class="nav flex-column">
+                  <li v-for="page in data.pages" class="nav-item mb-2">
+                    <a :href="page.url" target="_blank">{{ page.title }}</a>
+                  </li>
+                </ul>
+
+                <!-- Pages (inside main domian) -->
+                <ul v-else class="nav flex-column">
+                  <li v-for="page in data.pages" class="nav-item mb-2">
+                    <router-link class="nav-link p-0 text-body-secondary" :to="page.url" active_class="active">{{ page.title }}</router-link>
+                  </li>
+                </ul>
           </div>
+
           <!-- <div class="mt-4">
 
             <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
