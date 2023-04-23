@@ -11,7 +11,6 @@
         
         <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
 
-
         <h2>Obsidian Poznámky</h2>
         <p>Poznámky kde jsou předlohy, Návrhy, Dokumentace a Mapy* stránky.</p>
         <p>Můžou tam být gramatické chyby</p>

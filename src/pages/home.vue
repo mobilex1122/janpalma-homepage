@@ -2,7 +2,7 @@
   import linkButton from '@comp/link-button.vue'
 import { appendFile } from 'fs';
 import { state } from '../props';
-  
+import {MotionCanvasPlayerProps} from"@motion-canvas/player"
 
 </script>
 
@@ -10,8 +10,6 @@ import { state } from '../props';
   <div>
     <img src="/main-logo.svg" class="mx-auto d-block" :class="{light: state.lighttheme}" style="width: 70%;">
     <h1>Domov</h1>
- 
-    
     <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, delectus deleniti. Dignissimos veritatis officiis perferendis numquam doloremque quo nihil optio recusandae nisi omnis veniam libero, tenetur, illum officia voluptatem laboriosam.</p>
     <p class="text-justify">Soluta fuga aperiam, illum labore quibusdam repellendus facere porro blanditiis voluptates magnam possimus earum esse eius. In, sequi quidem delectus iste, voluptatibus voluptate ratione quam eligendi provident voluptatem deleniti vero.</p>
     <p class="text-justify">Deserunt totam pariatur quidem, quibusdam expedita doloribus vel unde velit veniam distinctio tempora sapiente eos aperiam natus numquam voluptate dolore sit delectus reiciendis! Eos, incidunt ullam ab quo nam atque.</p>
@@ -23,15 +21,17 @@ import { state } from '../props';
 </template>
 
 <script lang="ts">
-
+  
   export default {
     methods: {
       lighttheme() {
         console.log( state.lighttheme)
         return state.lighttheme
       }
+    },
+    mounted() {
+      //let player = new mtplay()
     }
-    
   }
 </script>
 

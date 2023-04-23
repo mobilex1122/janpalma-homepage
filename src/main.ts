@@ -50,6 +50,13 @@ const routes = [
       }
     },
     {
+      path: '/anime',
+      component: ()=>import("@p/anime.vue"),
+      meta: {
+        title: 'Anime',
+      }
+    },
+    {
       path: '/:pathMatch(.*)',
       component: Errors,
       meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }
