@@ -160,45 +160,10 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "floating": {
-    "id": "492e9fcc6bf2e7d3",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0ab64029be527241",
-        "type": "window",
-        "children": [
-          {
-            "id": "f6057b425dc289cc",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1212e786facd70f8",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "graph",
-                  "state": {},
-                  "pinned": true
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 344,
-        "y": 69,
-        "width": 1576,
-        "height": 967,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "3e94f076643f72b3",
   "lastOpenFiles": [
-    "Návrh/Domov.md",
     "Dokumentace/konfigurace/props.ts.md",
+    "Návrh/Domov.md",
     "Návrh/Galerie.md",
     "Návrh/Návrh Textu.md",
     "Návrh/O mně.md",
