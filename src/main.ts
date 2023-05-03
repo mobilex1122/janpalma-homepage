@@ -72,6 +72,13 @@ const routes = [
       }
     },
     {
+      path: '/blog',
+      component: ()=>import("@p/blog.vue"),
+      meta: {
+        title: 'Blog',
+      }
+    },
+    {
       path: '/:pathMatch(.*)',
       component: Errors,
       meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }
