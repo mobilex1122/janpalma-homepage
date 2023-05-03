@@ -1,4 +1,10 @@
 {
   "accentColor": "",
+<<<<<<< Updated upstream
   "cssTheme": "Sanctum"
+=======
+  "theme": "obsidian",
+  "cssTheme": "Sanctum",
+  "showViewHeader": true
+>>>>>>> Stashed changes
 }

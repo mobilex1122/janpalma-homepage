@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "0e76235e1d704d4c",
+        "id": "ba437eacc747cc7e",
         "type": "tabs",
         "children": [
           {
-            "id": "9712eab8a0be239f",
+            "id": "c44d550751c963c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dokumentace/Dokumentace.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               }
             }
           },
           {
-            "id": "3e94f076643f72b3",
+            "id": "1ee8d36cb028ccc6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dokumentace/konfigurace/props.ts.md",
+                "file": "Dokumentace/Dokumentace.md",
                 "mode": "source",
                 "source": true
               }
@@ -91,6 +91,7 @@
       {
         "id": "19403436d4e173f3",
         "type": "tabs",
+        "dimension": 58.79446640316205,
         "children": [
           {
             "id": "64e795053d16bc5f",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dokumentace/konfigurace/props.ts.md",
+                "file": "Dokumentace/Dokumentace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dokumentace/konfigurace/props.ts.md",
+                "file": "Dokumentace/Dokumentace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,16 +139,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dokumentace/konfigurace/props.ts.md"
+                "file": "Dokumentace/Dokumentace.md"
               }
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "9ebf7d3fdcafb14b",
+        "type": "tabs",
+        "dimension": 41.20553359683795,
+        "children": [
+          {
+            "id": "3e94f076643f72b3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 380.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,21 +176,29 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
+<<<<<<< Updated upstream
   "active": "3e94f076643f72b3",
   "lastOpenFiles": [
     "Dokumentace/konfigurace/props.ts.md",
+=======
+  "active": "e4a41a20d126b581",
+  "lastOpenFiles": [
+    "2023-04-24.md",
+    "Dokumentace/Dokumentace.md",
+    "Dokumentace/automatizace/Navigační panel a footer.md",
+    "Dokumentace/konfigurace/package.json.md",
+    "Dokumentace/konfigurace/props.ts.md",
+    "Dokumentace/styly/Rozmazání.md",
+>>>>>>> Stashed changes
     "Návrh/Domov.md",
     "Návrh/Galerie.md",
     "Návrh/Návrh Textu.md",
-    "Návrh/O mně.md",
     "Návrh/O Stránce.md",
+    "Návrh/O mně.md",
     "Návrh/Projekty.md",
     "Přepis/Přepis Textu.md",
     "README.md",
-    "Dokumentace/Dokumentace.md",
-    "Dokumentace/konfigurace/package.json.md",
-    "Dokumentace/automatizace/Navigační panel a footer.md",
-    "Dokumentace/styly/Rozmazání.md",
+    "scr.md",
     "obrazky/settings.png",
     "Dokumentace/styly",
     "Mapy/Mapa Stránek - Návrh.canvas",

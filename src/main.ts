@@ -11,6 +11,7 @@ import Errors from './pages/errors.vue'
 import GlobalCCode from '@comp/global/ccode.vue'
 import Loading from '@comp/system/loading.vue'
 
+
 const routes = [
     { 
       path: '/',
@@ -54,6 +55,20 @@ const routes = [
       component: ()=>import("@p/anime.vue"),
       meta: {
         title: 'Anime',
+      }
+    },
+    {
+      path: '/projects',
+      component: ()=>import("@p/projects/index.vue"),
+      meta: {
+        title: 'Projekty',
+      }
+    },
+    {
+      path: '/doc',
+      component: ()=>import("@p/doc.vue"),
+      meta: {
+        title: 'Projekty',
       }
     },
     {

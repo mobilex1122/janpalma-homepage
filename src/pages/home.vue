@@ -2,7 +2,7 @@
   import linkButton from '@comp/link-button.vue'
 import { appendFile } from 'fs';
 import { state } from '../props';
-import {MotionCanvasPlayerProps} from"@motion-canvas/player"
+import "@motion-canvas/player"
 
 </script>
 

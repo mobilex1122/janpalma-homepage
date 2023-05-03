@@ -4,9 +4,9 @@
   "inlineImages": true,
   "makeNamesWebStyle": true,
   "includePluginCSS": "",
-  "addDarkModeToggle": false,
-  "includeOutline": true,
+  "addDarkModeToggle": true,
+  "includeOutline": false,
   "customLineWidth": 0,
-  "openAfterExport": true,
+  "openAfterExport": false,
   "lastExportPath": "/home/mobilex/Documents/GitHub/janpalma-homepage/public/obsidian"
 }

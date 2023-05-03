@@ -1,0 +1,12 @@
+{
+  "red-graphite@@red-graphite-base-color@@dark": "#212121",
+  "obsidian-prism-theme@@color-schemes-dt": "pt-color-scheme-raven-dt",
+  "obsidian-prism-theme@@accent-style-dt": "pt-accent-style-filled-dt",
+  "obsidian-prism-theme@@dark-accent-color-preset": "pt-accent-color-red-dt",
+  "obsidian-prism-theme@@highlight-text-accent-dt": "pt-highlight-text-light-dt",
+  "sanctum@@aside-counter": false,
+  "sanctum@@no-sanctum-icons": false,
+  "sanctum@@calendar-flip": false,
+  "sanctum@@colorful-active-nav": false,
+  "sanctum@@nav-folder-indicators": false
+}

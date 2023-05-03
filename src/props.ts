@@ -29,6 +29,7 @@ export const pages = [
             {title: "Yotube", url:"https://www.youtube.com/@mobilexENCZ"},
             {title: "Facebook", url:"https://www.facebook.com/mobilex1122.cz/"},
             {title: "Instagram", url:"https://www.instagram.com/mobilex1122_cz/"},
+            {title: "Twitter", url:"https://twitter.com/mobilex1122"},
         ]
-    }
+    },
 ]

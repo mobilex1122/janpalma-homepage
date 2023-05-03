@@ -8,7 +8,6 @@
   import { state, pages } from './props.js'
 
   //import { Tooltip } from 'bootstrap'
-
 </script>
 <template>
   <div>
@@ -16,16 +15,14 @@
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
     <navbar :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" class="border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
-      <!-- Auto generated links from /src/props.ts -->
-      <template v-for="data in pages" >
-        <!-- Generates only if ismain == true -->
-        <navmenu v-if="data.ismain == true">
-            <template v-for="page in data.pages">
-              <navbutton :to="page.url">{{ page.title }}</navbutton>
-            </template>
-        </navmenu>
-      </template>
-      <navsocmenu>
+		<template v-for="data in pages">
+			<navmenu v-if="data.ismain == true">
+           		<template v-for="page in data.pages">
+       				<navbutton :to="page.url">{{ page.title }}</navbutton>
+      			</template>
+			</navmenu>
+		</template>
+		<navsocmenu>
         <button type="button" class="me-3 me-lg-0 nav-link" data-bs-toggle="modal" data-bs-target="#settings"><i class="bi bi-gear-fill"></i></button>
         
         
