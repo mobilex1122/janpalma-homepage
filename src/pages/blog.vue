@@ -2,6 +2,7 @@
     import { defineComponent } from "vue";
     import Loading from '@comp/loading.vue';
     import { Modal } from 'bootstrap';
+import { type } from "os";
 </script>
 
 <template>
@@ -36,6 +37,8 @@
                 </div>
             </template>
         </div>
+        <hr>
+        Zdroj: <a href="https://mobilex1122.blogspot.com/">https://mobilex1122.blogspot.com/</a>
 
         <div class="modal fade" id="post" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
@@ -71,6 +74,10 @@
             : subString) + "&hellip;";
     };
 
+    type BlogData = {
+        items: {title: string, content:string, published:string}[]
+    }
+
     export default defineComponent({
         data() {
             return {
@@ -90,7 +97,7 @@
         async mounted () {
 
             const postsraw = await fetch("https://www.googleapis.com/blogger/v3/blogs/2050273709837882209/posts?key=AIzaSyBMLzLqb7IYdnBdKFLMOZe48L4rfzU9L54")
-            const posts = await postsraw.json()
+            const posts = await postsraw.json() as BlogData
 
             if (posts.items) {
                 posts.items.forEach((post)=> {
