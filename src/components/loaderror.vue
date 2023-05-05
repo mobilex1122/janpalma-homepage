@@ -53,7 +53,6 @@ const count = ref(0)
   fill: none;
   stroke-linejoin:round;
   stroke: rgb(0, 0, 0);
-  stroke-linecap: round;
   stroke-width: 0.5px;
   filter: drop-shadow(rgb(0, 0, 0) 0 0 1px);
 }
@@ -71,7 +70,7 @@ body[data-bs-theme="light"] .logo {
   stroke-linejoin:round;
   stroke-width: 0.5px;
   stroke-dasharray: 0 100;
-  animation: anim 10s infinite forwards ease-out;
+  animation: anim 2s forwards ease-out;
   filter: brightness(1);
 }
 
@@ -80,8 +79,8 @@ body[data-bs-theme="light"] .logo {
   stroke: rgba(255, 255, 255, 0);
   stroke-width: 0.5px;
   stroke-linejoin:round;
-  animation: anim2 10s infinite ease-out;
-  filter: drop-shadow(rgb(255, 255, 255) 0 0 5px);
+  animation: anim2 2s forwards ease-out;
+  filter: drop-shadow(rgb(255, 0, 0) 0 0 5px);
 }
 
 @keyframes anim {
@@ -113,17 +112,13 @@ body[data-bs-theme="light"] .logo {
     fill: rgba(255, 255, 255, 0);
     stroke: rgba(255, 255, 255, 0);
   }
-  50% {
-    fill: white;
-    stroke: white;
+  70% {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 0, 0);
   }
-  80% {
-    fill: white;
-    stroke: white;
-  }
-  90% {
-    fill: rgba(255, 255, 255, 0);
-    stroke: rgba(255, 255, 255, 0);
+  100% {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 0, 0);
   }
 }
 </style>

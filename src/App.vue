@@ -7,7 +7,6 @@
   import linkButton from '@comp/link-button.vue';
   import { state, pages } from './props.js'
 
-  //import { Tooltip } from 'bootstrap'
 </script>
 <template>
   <div>

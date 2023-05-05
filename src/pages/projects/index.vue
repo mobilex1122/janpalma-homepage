@@ -36,7 +36,7 @@
       "Content-Type": "application/json",
       'Accept':'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
-      'authorization': "token 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"
+      'authorization': "token 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"
     }}) 
         let output = await data.json() 
         list.innerHTML = ""

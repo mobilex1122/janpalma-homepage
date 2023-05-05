@@ -65,7 +65,7 @@ const routes = [
       }
     },
     {
-      path: '/doc',
+      path: '/doc:pathMatch(.*)',
       component: ()=>import("@p/doc.vue"),
       meta: {
         title: 'Projekty',
