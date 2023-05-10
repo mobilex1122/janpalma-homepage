@@ -9,7 +9,8 @@ export default defineConfig({
     alias: {
       "@comp": resolve(__dirname, "src/components"),
       "@img": resolve(__dirname, "public/img"),
-      "@p": resolve(__dirname, "src/pages")
+      "@p": resolve(__dirname, "src/pages"),
+      "@": resolve(__dirname,"src/")
     }
   },
   server: {

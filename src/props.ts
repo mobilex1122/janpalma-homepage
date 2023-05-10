@@ -18,6 +18,7 @@ export const pages = [
             {title: "O mně", url:"/about"},
             {title: "Galerie", url:"/gallery"},
             {title: "Projekty", url:"/projects"},
+            {title: "Blog", url:"/blog"},
         ]
     },
     {
