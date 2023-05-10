@@ -10,7 +10,7 @@ export default defineConfig({
       "@comp": resolve(__dirname, "src/components"),
       "@img": resolve(__dirname, "public/img"),
       "@p": resolve(__dirname, "src/pages"),
-      "@": resolve(__dirname,"src/")
+      "@src": resolve(__dirname,"src/")
     }
   },
   server: {

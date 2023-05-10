@@ -28,7 +28,7 @@
 
 <script lang="ts">
 
-    import {tokens} from "@/tokens"
+    import {tokens} from "../../tokens"
 
     const repos = async (list:Element,parms: {archived:string})=> {
         let data = await fetch("https://api.github.com/users/mobilex1122/repos", {
