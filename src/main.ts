@@ -79,6 +79,20 @@ const routes = [
       }
     },
     {
+      path: '/admin',
+      component: ()=>import("@p/admin/login.vue"),
+      meta: {
+        title: 'Blog',
+      }
+    },
+    {
+      path: '/admin/edit',
+      component: ()=>import("@p/admin/editor.vue"),
+      meta: {
+        title: 'Blog',
+      }
+    },
+    {
       path: '/:pathMatch(.*)',
       component: Errors,
       meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }
