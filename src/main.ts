@@ -5,7 +5,6 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import App from './App.vue'
 import Home from '@p/home.vue'
-import GoogleSignInPlugin from "vue3-google-signin"
 import Errors from './pages/errors.vue'
 
 import GlobalCCode from '@comp/global/ccode.vue'
@@ -79,13 +78,6 @@ const routes = [
       }
     },
     {
-      path: '/admin/blog',
-      component: ()=>import("@p/admin/blog.vue"),
-      meta: {
-        title: 'Blog',
-      }
-    },
-    {
       path: '/:pathMatch(.*)',
       component: Errors,
       meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }
@@ -124,9 +116,7 @@ const router = createRouter({
 
 
 
-createApp(App).use(GoogleSignInPlugin, {
-  clientId: '1076248232189-63st3aof4hcmrnkrsm2nfm8g3mnfq5e2.apps.googleusercontent.com',
-}).use(router).component(
+createApp(App).use(router).component(
   // the registered name
   'ccode',
   GlobalCCode

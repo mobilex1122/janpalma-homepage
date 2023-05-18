@@ -3,46 +3,13 @@
     import Loading from '@comp/loading.vue';
     import LoadError from '@comp/loaderror.vue'
 import { type } from "os";
-import { QuillEditor } from '@vueup/vue-quill'
-import '@vueup/vue-quill/dist/vue-quill.snow.css'
-import '@vueup/vue-quill/dist/vue-quill.bubble.css'
-    import { Ref } from "vue";
-import {
-  GoogleSignInButton,
-  type CredentialResponse,
-} from "vue3-google-signin";
+import { Ref } from "vue";
 
 // handle success event
-const handleLoginSuccess = (response: CredentialResponse) => {
-  const { credential } = response;
-  console.log("Access Token", credential);
-};
-
-// handle an error event
-const handleLoginError = () => {
-  console.error("Login failed");
-};
 </script>
 
 <template>
     <div>
-        <!-- <div>
-            <div v-if="token">
-
-            </div>
-            <div v-else class="text-center">
-            <GoogleSignInButton
-                @success="handleLoginSuccess"
-                @error="handleLoginError"
-                ></GoogleSignInButton>
-            </div>
-        </div> -->
-        <div class="">
-            <div class="bg-light text-dark">
-                <QuillEditor contetType='html'  theme="snow" v-model:content="cont" ref="editor"/>
-            </div>
-            <button @click="log">Print data</button>
-        </div>
         
         <div v-if="mainloading">
             <br><br>
@@ -63,7 +30,7 @@ const handleLoginError = () => {
                         <div class="mb-1 text-body-secondary"><code>{{ post.date}}</code></div>
                         <div class="mb-3 text-body-secondary">{{ post.author }}</div>
                         <p class="card-text mb-auto"></p>
-                        <button class="btn btn-outline-info text-left" @click="editPost(id)" type="button" data-bs-toggle="modal" data-bs-target="#postedit">Přečíst</button>
+                        <button class="btn btn-outline-info text-left" @click="showPost(id)" type="button" data-bs-toggle="modal" data-bs-target="#postedit">Přečíst</button>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -104,24 +71,6 @@ const handleLoginError = () => {
             </div>
         </div>
 
-
-        <div class="modal fade" id="postedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="post">{{ nowshowing.name }}</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div>
-                        <div class="bg-light text-dark">
-                            <QuillEditor contetType='html' theme="snow" ref="editor"></QuillEditor>
-                        </div>
-                        <button @click="log">Print data</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </template>
 
@@ -146,7 +95,6 @@ const handleLoginError = () => {
     type BlogData = {
         items: {title: string, content:string, published:string, author: {displayName:string}}[]
     }
-    const editor = ref(QuillEditor)
     export default defineComponent({
         data() {
             return {
@@ -159,17 +107,10 @@ const handleLoginError = () => {
             }
         },
         methods: {
-            log: function() {
-                console.log(editor.value.getHTML())
-            },
             showPost: function (id:number) {
 
                 this.nowshowing = this.posts[id]
             },
-            editPost: function (id:number) {
-                editor.value.setHTML(this.posts[id].content)
-                
-            }
         },
 
         async mounted () {
