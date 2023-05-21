@@ -26,6 +26,9 @@ $theme-colors: (
 
 @import 'bootstrap/scss/bootstrap';
 
+p {
+  text-align: justify;
+}
 
 // .bg-blur {
 //   --blur-size: 5px;
