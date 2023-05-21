@@ -32,13 +32,13 @@
 
     const repos = async (list:Element,parms: {archived:string})=> {
         let data = await fetch("https://api.github.com/users/mobilex1122/repos", {
-    method: "Get", // *GET, POST, PUT, DELETE, etc.
-    headers: {
-      "Content-Type": "application/json",
-      'Accept':'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      'authorization': "token " + tokens.github
-    }}) 
+            method: "Get", // *GET, POST, PUT, DELETE, etc.
+            headers: {
+            "Content-Type": "application/json",
+            'Accept':'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28',
+            'authorization': "token " + tokens.github
+        }}) 
         let output = await data.json() 
         list.innerHTML = ""
 

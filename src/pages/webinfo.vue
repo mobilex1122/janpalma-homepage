@@ -11,21 +11,6 @@
         
         <p>Tato stránka byla vytvořená pomocí Typescriptu, Vue,Vite a Bootstrap 5.3</p>
 
-        <h2>Obsidian Poznámky</h2>
-        <p>Poznámky kde jsou předlohy, Návrhy, Dokumentace a Mapy* stránky.</p>
-        <p>Můžou tam být gramatické chyby</p>
-        <hr>
-        <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#download">
-            Stáhnout
-        </button>
-        <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#online">
-            Otevřít Online
-        </button>
-        <hr>
-
-        
-            
-
 
         <h2>Frameworky</h2>
         <div class="card">
@@ -56,13 +41,13 @@
                 <div class="tab-pane m-2 show active" id="vue" role="tabpanel" aria-labelledby="vue-tab" tabindex="0">
                     <h3>Vue</h3>
                     <p>
-                        Je framework pro JavaScript který ulehčuje tvorbu UI (Uživatelského Rozhtaní).
+                        Je framework pro JavaScript, který ulehčuje tvorbu UI (Uživatelského Rozhtaní).
                         Dá se nainsatllovat pomocí <ccode>npm</ccode> (node package manager) nebo jen importovat <ccode>CDN</ccode> (Content Delivery Network).
-                        Celá tahle stránka byla vytvořená pomocí Vue, i s vlastníma komponentama.
+                        Celá tahle stránka byla vytvořená pomocí Vue, I s vlastními komponenty.
                     </p>
                     <p>
-                        Většina stránek vyvořených pomocí Vue je rozkouskovaná na víc souborů <ccode>.vue</ccode> které můžou být celé stránky nebo jen komponenty.
-                        Výhodou komponentů je že místo psaní velkého kódu pořát dokola se může psát jeden kradší který dosáhne stejného výsledku.
+                        Většina stránek vyvořených pomocí Vue je rozkouskovaná na víc souborů <ccode>.vue</ccode>, které můžou být buť celými stránkami nebo jen komponenty.
+                        Výhodou komponentů, je že místo psaní velkého kódu pořád dokola, se může psát jeden kratší, který dosáhne stejného výsledku.
                     </p>
                     <h4>Příklad</h4>
                     <h5>Normální kód:</h5>
@@ -128,11 +113,7 @@
         <!-- <br>
         <h2>Vlastní styly, komponenty</h2> -->
 
-        
 
-
-
-        <code>*: Mapy jsou vyditelné pouze v softwaru Obsidian</code>
         <div class="modal fade" tabindex="-1" id="download">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

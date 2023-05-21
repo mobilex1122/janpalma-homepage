@@ -30,6 +30,44 @@
   </head>
   <body data-bs-theme="dark">
     <div id="app">
+      <div class="noJS">
+        <h1 style="margin: 0;">Vypnutý Javascript</h1>
+        <p>JavaScript nebyl načten nebo jste ho vypnuly.</p>
+        <p>Zapněte Javascript pro správny chod stránky.</p>
+        <code>Error: JS not loaded</code>
+      </div>
+
+      <style>
+        body {
+          animation: bodybg 0s 2s forwards;
+        }
+
+        @keyframes bodybg {
+          to {background-color: black;}
+        }
+
+
+        .noJS {
+          opacity: 0;
+          position: absolute;
+          width: fit-content;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          color: white;
+          border: solid 0.2rem red;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          animation: nojs 0s 2s forwards;
+        }
+        @keyframes nojs {
+          to {
+            opacity: 1;
+            
+          }
+        }
+      </style>
     </div>
   </body>
 </html>

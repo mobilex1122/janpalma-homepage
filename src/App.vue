@@ -71,34 +71,19 @@
 
 
     <!-- page render -->
-
-    <div class="container my-4">
-      <!-- Tree nav -->
-      <nav v-if="$route.meta.type != 'error'" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li>
-            <router-link v-if="$route.path != '/' " to="/">home</router-link>
-            <span v-else>home</span>
-          </li>
-          <li v-for="(item, index) in $route.path.split('/')" class="breadcrumb-item">
-            <span v-if="$route.path.split('/').slice(0,index+1).join('/') == $route.path">{{ item }}</span>
-            <router-link v-else :to="$route.path.split('/').slice(0,index+1).join('/')">{{ item }}</router-link>
-          </li>
-        </ol>
-      </nav>
-
+    <div class="my-4">
       <!-- render -->
-      <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim}">
+      <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim, container: ($route.path != '/')}">
         <transition name="slide" mode="out-in">
             <component :is="Component" />
         </transition>
       </router-view>
-
-    
-    
-    
-    
     </div>
+    
+    
+    
+    
+    
     
     <!-- footer -->
 

@@ -14,7 +14,7 @@ export const pages = [
         ismain:true,
         type: "routes",
         pages: [
-            {title: "Domov", url:"/"},
+            {title: "Domů", url:"/"},
             {title: "O mně", url:"/about"},
             {title: "Galerie", url:"/gallery"},
             {title: "Projekty", url:"/projects"},
