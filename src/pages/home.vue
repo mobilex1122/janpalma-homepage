@@ -11,8 +11,11 @@ import transitionheader from '../components/transitionheader.vue';
   <div style="margin-top: -1.5rem;">
     <div class="headder container-fluid p-0 mb-3" style="position: relative; background-color: black;">
       <div id="headerbg" style="opacity: 1;">
-          <video src="/video/header/main.mp4" autoplay loop muted/>
+          <img src="/video/header/static-extralow.jpeg">
+          <img src="/video/header/static-low.jpeg">
           <img src="/video/header/static.png">
+          <video src="/video/header/main.mp4" autoplay loop muted/>
+          
       </div>
       <img src="/main-logo.svg" class="mx-auto d-block" :class="{light: state.lighttheme}" style="height: 70%; max-width: 97%; position: absolute; z-index: 5; left: 50%; top: 50%; transform: translate(-50%,-50%);">
     </div>
@@ -79,13 +82,14 @@ import transitionheader from '../components/transitionheader.vue';
     aspect-ratio: 20/4;
   }
   #headerbg video {
+    position: absolute;
+    inset: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
   }
   #headerbg img {
-    opacity: 0;
     position: absolute;
     inset: 0;
     height: 100%;
