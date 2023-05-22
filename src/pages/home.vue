@@ -24,7 +24,7 @@ import transitionheader from '../components/transitionheader.vue';
     <div class="container">
 
     
-      <h2>Kdo jsem?</h2>
+      <h2 id="kdojsem">Kdo jsem?</h2>
       <p class="text-justify">
         Jmenuji se Jan Palma. Věnuji se IT a jsem velký nadšenec v tomto oboru.
 
@@ -33,7 +33,7 @@ import transitionheader from '../components/transitionheader.vue';
       
 
     
-      <h2>Co umím?</h2>
+      <h2 id="coumim">Co umím?</h2>
       <p class="text-justify">
         Animace, edity, programování, grafika, design.
         <!-- <br>
@@ -42,13 +42,13 @@ import transitionheader from '../components/transitionheader.vue';
         <a class="btn btn-primary m-1" target="_blank" href="https://github.com/mobilex1122">Github</a> -->
       </p>
     
-      <h2>Moje projekty</h2>
-      <h3>ProjNULL Web</h3>
+      <h2 id="mojeprojekty">Moje projekty</h2>
+      <h3 id="projnullweb">ProjNULL Web</h3>
       <p class="text-justify">
         Je asi nejzajímavější projekt na kterém pracuji. ProjNULL web (webové stránky týmu, ve kterém jsem) je od základu napsaný mnou (HTML,CSS,JS) a momentálně pracuji na přepsání do Vue (stejný systém na kterém běží tahle stránka)
         <br><a href="http://null.mobilex1122.eu" target="_blank" rel="noopener noreferrer">Null Web</a>
       </p>
-      <h3>RSS News Bot</h3>
+      <h3 id="rssbot">RSS News Bot</h3>
       <p class="text-justify">
         Projekt, na kterém pracuji se spolužákem (pod přezdívkou HyScript). Cílem projektu je udělat bota na Discord, který zobrazuje RSS (nebo i jiné) správy přímo na Discordu.
         <br><a href="http://null.mobilex1122.eu" target="_blank" rel="noopener noreferrer">Github Repositář</a>

@@ -14,14 +14,14 @@
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
     <navbar :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" class="border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
-		<template v-for="data in pages">
-			<navmenu v-if="data.ismain == true">
-           		<template v-for="page in data.pages">
-       				<navbutton :to="page.url">{{ page.title }}</navbutton>
-      			</template>
-			</navmenu>
-		</template>
-		<navsocmenu>
+      <template v-for="data in pages">
+        <navmenu v-if="data.ismain == true">
+                <template v-for="page in data.pages">
+                <navbutton :to="page.url">{{ page.title }}</navbutton>
+              </template>
+        </navmenu>
+      </template>
+		  <navsocmenu>
         <button type="button" class="me-3 me-lg-0 nav-link" data-bs-toggle="modal" data-bs-target="#settings"><i class="bi bi-gear-fill"></i></button>
         
         
@@ -35,6 +35,26 @@
       </navsocmenu>
     </navbar>
 
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark" :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="mainoff" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Top</a>
+          <!-- <template>
+            <a href="#" class="list-group-item list-group-item-action">Top</a>
+          </template> -->
+        </ul> 
+      </div>
+    </div>
+    <button class="btn btn-primary position-fixed bottom-0 m-3 p-3 rounded-circle" style="aspect-ratio: 1;" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainoff" aria-controls="offcanvasExample">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+      </svg>
+    </button>
 
     <!-- Settings -->
 
@@ -72,12 +92,14 @@
 
     <!-- page render -->
     <div class="my-4">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
       <!-- render -->
-      <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim, container: ($route.path != '/')}">
-        <transition name="slide" mode="out-in">
-            <component :is="Component" />
-        </transition>
-      </router-view>
+        <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim, container: ($route.path != '/')}">
+          <transition name="slide" mode="out-in">
+              <component :is="Component" />
+          </transition>
+        </router-view>
+      </div>
     </div>
     
     

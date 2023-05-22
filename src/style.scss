@@ -4,6 +4,11 @@
 $primary: #c70000;
 //$primary: #ff6e27;
 //$primary:#5189EC;
+$enable-negative-margins: true;
+
+$navbar-toggler-padding-y:          .30rem;
+$navbar-toggler-padding-x:          .30rem;
+$navbar-toggler-focus-width: 0.1rem;
 
 $theme-colors: (
   "primary":    $primary,
@@ -23,6 +28,7 @@ $theme-colors: (
 
 @import "./jp-extend/blur.scss";
 @import "./jp-extend/text.scss";
+@import "./jp-extend/skewstyle.scss";
 
 @import 'bootstrap/scss/bootstrap';
 
