@@ -3,7 +3,7 @@
 import { appendFile } from 'fs';
 import { state } from '../props';
 import "@motion-canvas/player"
-import transitionheader from '../components/transitionheader.vue';
+import transitionheader from '@comp/transitionheader.vue';
 
 </script>
 

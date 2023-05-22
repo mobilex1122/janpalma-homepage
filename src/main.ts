@@ -1,5 +1,5 @@
 import { createApp, reactive } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 import './style.scss'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -11,7 +11,17 @@ import GlobalCCode from '@comp/global/ccode.vue'
 import Loading from '@comp/system/loading.vue'
 
 
-const routes = [
+const routes: RouteRecordRaw[] = [
+    {
+      path: "/en/",
+      component: Home,
+      children: [
+        {
+          path:"home",
+          component: Home
+        }
+      ]
+    },
     { 
       path: '/',
       component: Home,
