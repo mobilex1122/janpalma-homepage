@@ -12,16 +12,6 @@ import Loading from '@comp/system/loading.vue'
 
 
 const routes: RouteRecordRaw[] = [
-    {
-      path: "/en/",
-      component: Home,
-      children: [
-        {
-          path:"home",
-          component: Home
-        }
-      ]
-    },
     { 
       path: '/',
       component: Home,
