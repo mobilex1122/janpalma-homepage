@@ -10,7 +10,7 @@ import { Ref } from "vue";
 
 <template>
     <div>
-        
+        <h1>Blog</h1>
         <div v-if="mainloading">
             <br><br>
             <Loading />
@@ -30,7 +30,7 @@ import { Ref } from "vue";
                         <div class="mb-1 text-body-secondary"><code>{{ post.date}}</code></div>
                         <div class="mb-3 text-body-secondary">{{ post.author }}</div>
                         <p class="card-text mb-auto"></p>
-                        <button class="btn btn-outline-info text-left" @click="showPost(id)" type="button" data-bs-toggle="modal" data-bs-target="#postedit">Přečíst</button>
+                        <button class="btn btn-outline-info text-left" @click="showPost(id)" type="button" data-bs-toggle="modal" data-bs-target="#post">Přečíst</button>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                         <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -108,7 +108,6 @@ import { Ref } from "vue";
         },
         methods: {
             showPost: function (id:number) {
-
                 this.nowshowing = this.posts[id]
             },
         },
