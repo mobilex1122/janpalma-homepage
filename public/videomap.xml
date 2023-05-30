@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://janpalma.mobilex1122.eu/video/header/main.mp4</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2023-05-24</lastmod>
+        <video:video>
+            <video:thumbnail_loc>https://janpalma.mobilex1122.eu/video/header/static-low.jpeg</video:thumbnail_loc>
+            <video:title>Jan Palma - domovská animace</video:title>
+            <video:description>Animované pozadí hlavnístránky pro web Jan Palma</video:description>
+        </video:video>
+    </url>
+</urlset>

@@ -17,6 +17,7 @@ const routes: RouteRecordRaw[] = [
       component: Home,
       meta: {
         title: 'Domů',
+        description: "Hlavní Domovská stránka"
       }
     },
     { 
@@ -24,7 +25,7 @@ const routes: RouteRecordRaw[] = [
       component: ()=>import("@p/about.vue"),
       meta: {
         title: 'O mně',
-
+        description: "Jak jsem začal a co dělám."
       }
     },
     { 
@@ -32,6 +33,7 @@ const routes: RouteRecordRaw[] = [
       component: ()=>import("@p/gallery.vue"),
       meta: {
         title: 'Galerie',
+        description: "Videa, obrázky a kresby co jsem udělal."
       }
     },
     {
@@ -39,14 +41,8 @@ const routes: RouteRecordRaw[] = [
       component: ()=>import("@p/webinfo.vue"),
       meta: {
         title: 'O Stránce',
+        description:"Zajímavosti o této stránce",
         show: false
-      }
-    },
-    {
-      path: '/obsidian',
-      component: ()=>import("@p/obsidian.vue"),
-      meta: {
-        title: 'Obsidian Poznámky',
       }
     },
     {
@@ -61,13 +57,8 @@ const routes: RouteRecordRaw[] = [
       component: ()=>import("@p/projects/index.vue"),
       meta: {
         title: 'Projekty',
-      }
-    },
-    {
-      path: '/doc:pathMatch(.*)',
-      component: ()=>import("@p/doc.vue"),
-      meta: {
-        title: 'Projekty',
+        description:"Projekty které jsem udělal.",
+
       }
     },
     {
@@ -75,6 +66,7 @@ const routes: RouteRecordRaw[] = [
       component: ()=>import("@p/blog.vue"),
       meta: {
         title: 'Blog',
+        description:"Můj blog",
       }
     },
     {

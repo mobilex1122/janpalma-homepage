@@ -10,6 +10,7 @@
 </script>
 <template>
   <div>
+    <meta name="description" :content="($route.meta.description as string)"/>
     <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
     <title v-else>Jan Palma - {{ $route.meta.title }}</title>
     
