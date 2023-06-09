@@ -7,7 +7,8 @@
         <h1>Projekty</h1>
         
         <div class="m-1">
-            <a class="btn btn-outline-primary" @click="togglearchived()" id="toggler">Archivy</a>
+            <a class="btn btn-outline-primary me-1" @click="togglearchived()" id="toggler">Archivy</a>
+            <router-link to="/games" class="btn btn-outline-primary mx-1">Hry</router-link>
         </div>
         
 

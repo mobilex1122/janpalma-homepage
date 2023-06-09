@@ -28,7 +28,7 @@
         
 
         <div class="me-3 me-lg-0 py-2"><div style="height: 100%; width: 0; padding-inline: 0.04em; background-color: var(--bs-nav-link-color);"></div></div>
-
+        <navlink to="https://donate.stripe.com/fZe8zOd7Kbdg3fieUU?locale=cs" class="me-3 me-lg-0" ><i class="bi bi-stripe"></i></navlink>
         <navlink to="https://github.com/mobilex1122" class="me-3 me-lg-0" ><i class="bi bi-github"></i></navlink>
         <navlink to="https://instagram.com/mobilex1122_cz/" class="me-3 me-lg-0" ><i class="bi bi-instagram"></i></navlink>
         <navlink to="https://www.facebook.com/mobilex1122.cz/" class="me-3 me-lg-0" ><i class="bi bi-facebook"></i></navlink>
@@ -49,9 +49,11 @@
             <a href="#" class="list-group-item list-group-item-action">Top</a>
           </template> -->
         </ul> 
+        Tato sekce není dokončená.<br>
+        Omlouvám se.
       </div>
     </div>
-    <button class="btn btn-primary position-fixed bottom-0 m-3 p-3 rounded-circle" style="aspect-ratio: 1;" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainoff" aria-controls="offcanvasExample">
+    <button class="btn btn-primary position-fixed bottom-0 m-3 p-3 rounded-circle" style="aspect-ratio: 1; z-index: 999;" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainoff" aria-controls="offcanvasExample">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
       </svg>
@@ -136,6 +138,7 @@
               </span>
             </p>
             
+            <a target="_blank" class="btn btn-primary" href="https://donate.stripe.com/fZe8zOd7Kbdg3fieUU?locale=cs"><i class="bi bi-heart-fill"></i> Darovat</a>
           </div>
           <!-- Auto generated links from /src/props.ts -->
           <div v-for="data in pages" class="col mb-3">
@@ -158,6 +161,8 @@
                 </ul>
           </div>
 
+          
+
           <!-- <div class="mt-4">
 
             <span onclick="location.href = '?'" v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">
@@ -171,7 +176,9 @@
             </span>
           </div> -->
         </div> 
-      
+        <!-- <div class="text-muted p-0 m-0">
+            Pladby umožněny pomocí tehnologie <i class="bi bi-stripe"></i> Stripe
+        </div> -->
       </div>
       
     </footer>

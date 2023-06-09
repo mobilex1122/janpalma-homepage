@@ -4,7 +4,7 @@
 $primary: #c70000;
 //$primary: #ff6e27;
 //$primary:#5189EC;
-$enable-negative-margins: true;
+$enable-negative-margins: True;
 
 $navbar-toggler-padding-y:          .30rem;
 $navbar-toggler-padding-x:          .30rem;
@@ -31,9 +31,9 @@ $theme-colors: (
 
 @import 'bootstrap/scss/bootstrap';
 
-p {
-  text-align: justify;
-}
+// p {
+//   text-align: justify;
+// }
 
 // .bg-blur {
 //   --blur-size: 5px;

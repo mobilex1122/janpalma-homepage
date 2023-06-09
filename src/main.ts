@@ -70,6 +70,14 @@ const routes: RouteRecordRaw[] = [
       }
     },
     {
+      path: '/games',
+      component: ()=>import("@p/games/index.vue"),
+      meta: {
+        title: 'Hry',
+        description:"Hry které jsem udělal",
+      }
+    },
+    {
       path: '/:pathMatch(.*)',
       component: Errors,
       meta: { layout: 'none', title: '404', nofooter:true, type:"error", show:false }

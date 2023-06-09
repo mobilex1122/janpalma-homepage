@@ -19,6 +19,7 @@ export const pages = [
             {title: "Galerie", url:"/gallery"},
             {title: "Projekty", url:"/projects"},
             {title: "Blog", url:"/blog"},
+            {title: "Hry", url:"/games"}
         ]
     },
     {
