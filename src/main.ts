@@ -1,5 +1,6 @@
 import { createApp, reactive } from 'vue'
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+import { createI18n } from 'vue-i18n'
 import './style.scss'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -10,6 +11,8 @@ import Errors from './pages/errors.vue'
 import GlobalCCode from '@comp/global/ccode.vue'
 import Loading from '@comp/system/loading.vue'
 
+import en from './locales/en.json'
+import cz from './locales/cz.json'
 
 const routes: RouteRecordRaw[] = [
     { 
@@ -96,6 +99,14 @@ const router = createRouter({
     }
   })
   
+
+  const i18n = createI18n({
+    locale: 'cz',
+    messages: {
+      en,
+      cz
+    }
+  })
   // 5. Create and mount the root instance.
 
 
@@ -116,7 +127,7 @@ const router = createRouter({
 
 
 
-createApp(App).use(router).component(
+createApp(App).use(router).use(i18n).component(
   // the registered name
   'ccode',
   GlobalCCode

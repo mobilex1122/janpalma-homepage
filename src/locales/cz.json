@@ -1,0 +1,31 @@
+{
+  "DONATE": "Darovat",
+  "GITREPO": "Github Repositář",
+  "MOREPROJECTS": "Víc projektů",
+  "MYNAME": "Jan Palma",
+  "MYPROJECTS": {
+    "PROJECT1": {
+      "TITLE": "ProjNull Web"
+    },
+    "TITLE": "Moje projekty"
+  },
+  "SECTIONS": {
+    "ABOUT": "O mně",
+    "BLOG": "Blog",
+    "GALLERY": "Galerie",
+    "GAMES": "Hry",
+    "HOME": "Domov",
+    "PROJECTS": "Projekty"
+  },
+  "WARNINGS": {
+    "TLWARN": "Pozor! Probýhá rekonstrukce webu (Přidávání Angličnity)"
+  },
+  "WHATDOIDO": {
+    "TEXT": "Animace, edity, programování, grafika, design. ",
+    "TITLE": "Co umím?"
+  },
+  "WHOAMI": {
+    "TEXT": "Jmenuji se Jan Palma. Věnuji se IT a jsem velký nadšenec v tomto oboru.",
+    "TITLE": "Kdo jsem?"
+  }
+}

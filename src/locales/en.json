@@ -1,0 +1,29 @@
+{
+  "DONATE": "Donate",
+  "GITREPO": "Github Repository",
+  "MOREPROJECTS": "More Projects",
+  "MYNAME": "John Palma",
+  "MYPROJECTS": {
+    "PROJECT1": {
+      "TITLE": "ProjNull Web"
+    },
+    "TITLE": "My projects"
+  },
+  "SECTIONS": {
+    "ABOUT": "About me",
+    "BLOG": "Blog",
+    "GALLERY": "Gallery",
+    "GAMES": "Games"
+  },
+  "WARNINGS": {
+    "TLWARN": "Warning! Website under maintenance. (Translation to English)"
+  },
+  "WHATDOIDO": {
+    "TEXT": "Animation, editing, programming, graphics, design.",
+    "TITLE": "What do I do?"
+  },
+  "WHOAMI": {
+    "TEXT": "Jmenuji se Jan Palma. Věnuji se IT a jsem velký nadšenec v tomto oboru.",
+    "TITLE": "Who am I?"
+  }
+}

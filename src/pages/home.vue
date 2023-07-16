@@ -24,36 +24,38 @@ import transitionheader from '@comp/transitionheader.vue';
     <div class="container">
 
     
-      <h2 id="kdojsem">Kdo jsem?</h2>
+      <h2 id="kdojsem">{{ $t('WHOAMI.TITLE') }}</h2>
       <p class="text-justify">
-        Jmenuji se Jan Palma. Věnuji se IT a jsem velký nadšenec v tomto oboru.
+        {{ $t('WHOAMI.TEXT')}}
 
-        <br><router-link class="btn btn-primary m-1" to="/about">O mně</router-link>
+        <br><router-link class="btn btn-primary m-1" to="/about">{{ $t('SECTIONS.ABOUT')}}</router-link>
       </p>
       
 
     
-      <h2 id="coumim">Co umím?</h2>
+      <h2 id="coumim">{{ $t('WHATDOIDO.TITLE')}}</h2>
       <p class="text-justify">
-        Animace, edity, programování, grafika, design.
+        {{ $t("WHATDOIDO.TEXT")}}
         <!-- <br>
         <router-link class="btn btn-primary m-1" to="/gallery">Galerie</router-link>
         <a class="btn btn-primary m-1" target="_blank" href="https://youtube.com/@mobilexENCZ/">Youtube</a>
         <a class="btn btn-primary m-1" target="_blank" href="https://github.com/mobilex1122">Github</a> -->
       </p>
     
-      <h2 id="mojeprojekty">Moje projekty</h2>
-      <h3 id="projnullweb">ProjNULL Web</h3>
+      <h2 id="mojeprojekty">{{ $t("MYPROJECTS.TITLE")}}</h2>
+      <h3 id="projnullweb">{{ $t("MYPROJECTS.PROJECT1.TITLE")}}</h3>
       <p class="text-justify">
+        {{ $t("MYPROJECTS.PROJECT1.TEXT")}}
         Je asi nejzajímavější projekt na kterém pracuji. ProjNULL web (webové stránky týmu, ve kterém jsem) je od základu napsaný mnou (HTML,CSS,JS) a momentálně pracuji na přepsání do Vue (stejný systém na kterém běží tahle stránka)
         <br><a href="http://null.mobilex1122.eu" target="_blank" rel="noopener noreferrer">Null Web</a>
       </p>
-      <h3 id="rssbot">RSS News Bot</h3>
+      <h3 id="rssbot">{{ $t("MYPROJECTS.PROJECT2.TITLE")}}</h3>
       <p class="text-justify">
+        {{ $t("MYPROJECTS.PROJECT2.TEXT")}}
         Projekt, na kterém pracuji se spolužákem (pod přezdívkou HyScript). Cílem projektu je udělat bota na Discord, který zobrazuje RSS (nebo i jiné) správy přímo na Discordu.
-        <br><a href="http://null.mobilex1122.eu" target="_blank" rel="noopener noreferrer">Github Repositář</a>
+        <br><a href="http://null.mobilex1122.eu" target="_blank" rel="noopener noreferrer">{{ $t("GITREPO")}}</a>
       </p>
-      <router-link class="btn btn-primary m-1" to="/projects">Víc projektů</router-link>
+      <router-link class="btn btn-primary m-1" to="/projects">{{ $t("MOREPROJECTS")}}</router-link>
     </div>
     <br>
 </div>

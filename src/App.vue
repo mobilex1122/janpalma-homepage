@@ -12,7 +12,7 @@
   <div>
     <meta name="description" :content="($route.meta.description as string)"/>
     <title v-if="$route.query['e_as-the-register-g'] && $route.query['e_as-the-register-g'] != '69'">Zdravím dobrodruhu</title>
-    <title v-else>Jan Palma - {{ $route.meta.title }}</title>
+    <title v-else>{{ $t("MYNAME") }} - {{ $route.meta.title }}</title>
     
     <navbar :class="{'bg-blur-md-20 bg-opacity-md-75':state.blur}" class="border-bottom navbar-noise" v-show="!$route.meta.nonav" brand='Jan Palma'>
       <template v-for="data in pages">
@@ -24,15 +24,23 @@
       </template>
 		  <navsocmenu>
         <button type="button" class="me-3 me-lg-0 nav-link" data-bs-toggle="modal" data-bs-target="#settings"><i class="bi bi-gear-fill"></i></button>
-        
-        
+        <div class="dropdown me-1">
+          <button type="button" class="me-3 me-lg-0 nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+            <i class="bi bi-translate"></i> <span v-html="$i18n.locale.toUpperCase()"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item" v-for="locale in $i18n.availableLocales" v-on:click="$i18n.locale = locale">{{ locale }}</li>
+          </ul>
+        </div>
+
 
         <div class="me-3 me-lg-0 py-2"><div style="height: 100%; width: 0; padding-inline: 0.04em; background-color: var(--bs-nav-link-color);"></div></div>
         <navlink to="https://donate.stripe.com/fZe8zOd7Kbdg3fieUU?locale=cs" class="me-3 me-lg-0" ><i class="bi bi-stripe"></i></navlink>
         <navlink to="https://github.com/mobilex1122" class="me-3 me-lg-0" ><i class="bi bi-github"></i></navlink>
         <navlink to="https://instagram.com/mobilex1122_cz/" class="me-3 me-lg-0" ><i class="bi bi-instagram"></i></navlink>
-        <navlink to="https://www.facebook.com/mobilex1122.cz/" class="me-3 me-lg-0" ><i class="bi bi-facebook"></i></navlink>
+        <!-- <navlink to="https://www.facebook.com/mobilex1122.cz/" class="me-3 me-lg-0" ><i class="bi bi-facebook"></i></navlink> -->
         <navlink to="https://youtube.com/@mobilexENCZ/" class="me-3 me-lg-0" ><i class="bi bi-youtube"></i></navlink>
+        <li class="nav-item me-3 me-lg-0"><a rel="me" class="nav-link" target="_blank" href="https://youtube.com/@mobilexENCZ/"><i class="bi bi-mastodon"></i></a></li>
       </navsocmenu>
     </navbar>
 
@@ -96,6 +104,16 @@
     <!-- page render -->
     <div class="my-4">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+
+        <!-- translation alert -->
+        <div class="alert alert-warning alert-dismissible bg-opacity-25 fade show position-fixed" style="z-index: 1000; left: 50%; transform: translate(-50%); max-width: 80%; width: max-content; margin-top: 1rem;" role="alert">
+          
+          <span>
+            <i class="bi-exclamation-triangle-fill me-2"/>
+            {{ $t("WARNINGS.TLWARN") }}
+          </span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
       <!-- render -->
         <router-view id="renderview" v-slot="{ Component }" :class="{noanim: state.reducedanim, container: ($route.path != '/')}">
           <transition name="slide" mode="out-in">
@@ -134,11 +152,11 @@
               <span class="mb-3 mb-md-0 text-body-secondary" onclick="location.href = '?'" v-else-if="$route.query['e_as-the-register-g'] == '69'">
                 <i class="bi bi-arrow-right"></i> <i class="bi bi-6-circle"></i><i class="bi bi-9-circle"></i> <i class="bi bi-arrow-left"></i>
               </span>
-              <span class="mb-3 mb-md-0 text-body-secondary" v-else><span onclick="location.href = '?e_as-the-register-g=1'">©</span> 2023 Jan Palma
+              <span class="mb-3 mb-md-0 text-body-secondary" v-else><span onclick="location.href = '?e_as-the-register-g=1'">©</span> 2023 {{ $t("MYNAME")}}
               </span>
             </p>
             
-            <a target="_blank" class="btn btn-primary" href="https://donate.stripe.com/fZe8zOd7Kbdg3fieUU?locale=cs"><i class="bi bi-heart-fill"></i> Darovat</a>
+            <a target="_blank" class="btn btn-primary" href="https://donate.stripe.com/fZe8zOd7Kbdg3fieUU?locale=cs"><i class="bi bi-heart-fill"></i> {{ $t("DONATE")}}</a>
           </div>
           <!-- Auto generated links from /src/props.ts -->
           <div v-for="data in pages" class="col mb-3">
